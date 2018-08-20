@@ -1,0 +1,130 @@
+\documentclass[oneside,a4paper,12pt]{article}
+\usepackage[english,brazilian]{babel}
+\usepackage[alf]{abntex2cite}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+\usepackage{lastpage}			  % Usado pela Ficha catalográfica
+\usepackage{indentfirst}		  % Indenta o primeiro parágrafo de cada
+\usepackage[top=20mm, bottom=20mm, left=20mm, right=20mm]{geometry}
+\usepackage{framed}
+\usepackage{booktabs}
+
+\usepackage{float}
+\usepackage{color}				  % Controle das cores
+\usepackage{graphicx}			  % Inclusão de gráficos
+\usepackage{microtype} 		      % para melhorias de justificação
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage[table]{xcolor}
+\usepackage{subfig}
+\usepackage{epstopdf}
+\usepackage{hyperref}
+
+\usepackage[mathcal]{eucal}
+\usepackage{amsmath}               % great math stuff
+\usepackage{amsfonts}              % for blackboard bold, etc
+\usepackage{amsthm}                % better theorem environments
+\usepackage{amssymb}
+\usepackage{mathrsfs}
+\DeclareMathAlphabet{\mathpzc}{OT1}{pzc}{m}{it}
+\usepackage{undertilde}            % botar tilde embaixo da letra
+\usepackage{mathptmx}          % fonte
+\usepackage{graphicx}
+\graphicspath{{./Figuras/}}    
+\definecolor{shadecolor}{rgb}{0.8,0.8,0.8}
+
+
+%FAZ EDICOES AQUI (somente no conteudo que esta entre entre as ultimas  chaves de cada linha!!!)
+\newcommand{\universidade}{Universidade Federal de Pernambuco}
+\newcommand{\centro}{Centro Acadêmico do Agreste}
+\newcommand{\departamento}{Núcleo de Tecnologia}
+\newcommand{\curso}{Engenharia de Produção}
+\newcommand{\professor}{Fernando R. L. Contreras}
+\newcommand{\disciplina}{Cálculo Diferencial e Integral 3}
+%ATE AQUI !!!
+
+\begin{document}
+	\pagestyle{empty}
+	
+	\begin{center}
+	%\includegraphics[width=\linewidth/6]{logoUFPE.jpg}%LOGOTIPO DA INSTITUICAO
+	 	\vspace{0pt}
+	 	
+		\universidade
+		\par
+		\centro
+		\par
+		\departamento
+		\par
+		\curso
+		\par
+		\vspace{08pt}
+		\text{ Prova 1 - Cálculo Diferencial e Integral 3}\\
+		\text{Prof. Fernando R. L. Contreras}	
+	\end{center}
+	
+	%\vspace{0.5pt}
+	
+	\begin{flushleft}
+		\textbf{Aluno(a):}
+	\end{flushleft}
+	
+\begin{itemize}
+\item[1.] Método de Newton. As sequências vêm da formula recursiva para o método de Newton, $x_{n+1}=x_{n}-\frac{f(x_{n})}{f'(x_{n})}$. A sequência converge? Em caso afirmativo, para qual valor? Identifique a função $f$ que gera a sequência $x_{0}=1, x_{n+1}=x_{n}-\frac{x_{n}^{2}-2}{2x_{n}}=\frac{x_{n}}{2}+\frac{1}{x_{n}}$.
+\end{itemize}
+\begin{itemize}
+\item[2.] Determine o polinômio de Taylor de ordem 2 da função dada, em volta do ponto $(1,1)$ dado por  $f(x,y)=x^{3}+2x^{2}y+3y^{3}+x-y$. 
+ \end{itemize}
+ \begin{itemize}
+\item [3.] A série $\sum_{n=1}^{\infty} (-1)^{n}\frac{n+2}{n(n+1)} $ é absolutamente convergente ou condicionalmente convergente? Justifique sua resposta.
+\end{itemize}
+\begin{itemize}
+\item[4.] Determine o intervalo de convergência da série de potencia  $\sum_{n=1}^{\infty}\frac{x^{n}}{2+n^{2}} $ .
+\end{itemize}
+\begin{itemize}
+	\item[Opcional.] Escreva a definição de limite de sequência na forma simbólica.
+\end{itemize}
+
+	\flushbottom
+	\flushright
+     \begin{center}
+     	%\includegraphics[width=\linewidth/6]{logoUFPE.jpg}%LOGOTIPO DA INSTITUICAO
+     	\vspace{50pt}
+     	
+     	\universidade
+     	\par
+     	\centro
+     	\par
+     	\departamento
+     	\par
+     	\curso
+     	\par
+     	\vspace{08pt}
+     	\text{ Prova 1 - Cálculo Diferencial e Integral 3}\\
+     	\text{Prof. Fernando R. L. Contreras}	
+     \end{center}
+     
+     \begin{flushleft}
+     	\textbf{Aluno(a):}
+     \end{flushleft}
+ 
+ \begin{itemize}
+ 	\item[1.] Método de Newton. As sequências vêm da formula recursiva para o método de Newton, $x_{n+1}=x_{n}-\frac{f(x_{n})}{f'(x_{n})}$. A sequência converge? Em caso afirmativo, para qual valor? Identifique a função $f$ que gera a sequência $x_{0}=1, x_{n+1}=x_{n}-\frac{x_{n}^{2}-2}{2x_{n}}=\frac{x_{n}}{2}+\frac{1}{x_{n}}$.
+ \end{itemize}
+ \begin{itemize}
+ 	\item[2.] Determine o polinômio de Taylor de ordem 2 da função dada, em volta do ponto $(1,1)$ dado por  $f(x,y)=x^{3}+2x^{2}y+3y^{3}+x-y$. 
+ \end{itemize}
+ \begin{itemize}
+ 	\item [3.] A série $\sum_{n=1}^{\infty}(-1)^{n}\frac{n+2}{n(n+1)} $ é absolutamente convergente ou condicionalmente convergente? Justifique sua resposta.
+ \end{itemize}
+ \begin{itemize}
+ 	\item[4.] Determine o intervalo de convergência da série de potencia  $\sum_{n=1}^{\infty} \frac{x^{n}}{2+n^{2}} $ .
+ \end{itemize}
+ \begin{itemize}
+ 	\item[Opcional.] Escreva a definição de limite de sequência na forma simbólica.
+ \end{itemize}
+\flushbottom
+\flushright
+\end{document}
+

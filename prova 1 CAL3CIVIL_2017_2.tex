@@ -1,0 +1,129 @@
+\documentclass[oneside,a4paper,12pt]{article}
+\usepackage[english,brazilian]{babel}
+\usepackage[alf]{abntex2cite}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+\usepackage{lastpage}			  % Usado pela Ficha catalográfica
+\usepackage{indentfirst}		  % Indenta o primeiro parágrafo de cada
+\usepackage[top=20mm, bottom=20mm, left=20mm, right=20mm]{geometry}
+\usepackage{framed}
+\usepackage{booktabs}
+
+\usepackage{float}
+\usepackage{color}				  % Controle das cores
+\usepackage{graphicx}			  % Inclusão de gráficos
+\usepackage{microtype} 		      % para melhorias de justificação
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage[table]{xcolor}
+\usepackage{subfig}
+\usepackage{epstopdf}
+\usepackage{hyperref}
+
+\usepackage[mathcal]{eucal}
+\usepackage{amsmath}               % great math stuff
+\usepackage{amsfonts}              % for blackboard bold, etc
+\usepackage{amsthm}                % better theorem environments
+\usepackage{amssymb}
+\usepackage{mathrsfs}
+\DeclareMathAlphabet{\mathpzc}{OT1}{pzc}{m}{it}
+\usepackage{undertilde}            % botar tilde embaixo da letra
+\usepackage{mathptmx}          % fonte
+\usepackage{graphicx}
+\graphicspath{{./Figuras/}}    
+\definecolor{shadecolor}{rgb}{0.8,0.8,0.8}
+
+
+%FAZ EDICOES AQUI (somente no conteudo que esta entre entre as ultimas  chaves de cada linha!!!)
+\newcommand{\universidade}{Universidade Federal de Pernambuco}
+\newcommand{\centro}{Centro Acadêmico do Agreste}
+\newcommand{\departamento}{Núcleo de Tecnologia}
+\newcommand{\curso}{Engenharia Civil}
+\newcommand{\professor}{Fernando R. L. Contreras}
+\newcommand{\disciplina}{Cálculo Diferencial e Integral 3}
+%ATE AQUI !!!
+
+\begin{document}
+	\pagestyle{empty}
+	
+	\begin{center}
+	%\includegraphics[width=\linewidth/6]{logoUFPE.jpg}%LOGOTIPO DA INSTITUICAO
+	 	\vspace{0pt}
+	 	
+		\universidade
+		\par
+		\centro
+		\par
+		\departamento
+		\par
+		\curso
+		\par
+		\vspace{08pt}
+		\text{ Prova 1 - Cálculo Diferencial e Integral 3}\\
+		\text{Prof. Fernando R. L. Contreras}	
+	\end{center}
+	
+	%\vspace{0.5pt}
+	
+	\begin{flushleft}
+		Aluno(a):
+	\end{flushleft}
+	
+\begin{itemize}
+\item[1.] Determine se a sequência  $a_{n}=\frac{(-1)^{n-1}n}{n^{2}+1}$ converge ou diverge, \textbf{justifique utilizando os teoremas de maneira adequada}.
+\end{itemize}
+\begin{itemize}
+\item[2.] Os termos da série são definidos recursivamente pelas equações
+$a_{1}=2$, $a_{n+1}=\frac{5n+1}{4n-3}a_{n}$. Determine se $\mathlarger{\sum} a_{n}$ converge ou diverge. 
+ \end{itemize}
+ \begin{itemize}
+\item [3.] Se $k$ for inteiro positivo, encontre o raio de convergência da série $\mathlarger{\sum}_{n=0}^{\infty}\frac{(n!)^{k}}{(kn)!}x^{n}$ .
+\end{itemize}
+\begin{itemize}
+\item[4.] Sejam $f(x,y)=x^{3}+y^{3}-x^{2}+4y$ e $P_{1}(x,y)$ o polinômio de Taylor de ordem 1 de $f$ em volta de $(1,1)$. Mostre que para todo $(x,y)$, com $|x-1|<1$ e $|y-1|<1$, $\left|f(x,y)-P_{1}(x,y)\right|<7(x-1)^{2}+6(y-1)^{2}$.
+\end{itemize}
+
+	\flushbottom
+	\flushright
+     Êxitos...!!!
+     \begin{center}
+     	%\includegraphics[width=\linewidth/6]{logoUFPE.jpg}%LOGOTIPO DA INSTITUICAO
+     	\vspace{50pt}
+     	
+     	\universidade
+     	\par
+     	\centro
+     	\par
+     	\departamento
+     	\par
+     	\curso
+     	\par
+     	\vspace{08pt}
+     	\text{ Prova 1 - Cálculo Diferencial e Integral 3}\\
+     	\text{Prof. Fernando R. L. Contreras}	
+     \end{center}
+     
+     \begin{flushleft}
+     	Aluno(a):
+     \end{flushleft}
+ 
+ \begin{itemize}
+ 	\item[1.] Determine se a sequência  $a_{n}=\frac{(-1)^{n-1}n}{n^{2}+1}$ converge ou diverge, \textbf{justifique utilizando os teoremas de maneira adequada}.
+ \end{itemize}
+ \begin{itemize}
+ 	\item[2.] Os termos da série são definidos recursivamente pelas equações
+ 	$a_{1}=2$, $a_{n+1}=\frac{5n+1}{4n-3}a_{n}$. Determine se $\mathlarger{\sum} a_{n}$ converge ou diverge. 
+ \end{itemize}
+ \begin{itemize}
+ 	\item [3.] Se $k$ for inteiro positivo, encontre o raio de convergência da série $\mathlarger{\sum}_{n=0}^{\infty}\frac{(n!)^{k}}{(kn)!}x^{n}$ .
+ \end{itemize}
+ \begin{itemize}
+ 	\item[4.] Sejam $f(x,y)=x^{3}+y^{3}-x^{2}+4y$ e $P_{1}(x,y)$ o polinômio de Taylor de ordem 1 de $f$ em volta de $(1,1)$. Mostre que para todo $(x,y)$, com $|x-1|<1$ e $|y-1|<1$, $\left|f(x,y)-P_{1}(x,y)\right|<7(x-1)^{2}+6(y-1)^{2}$.
+ \end{itemize}
+ 
+\flushbottom
+\flushright
+Êxitos...!!!
+\end{document}
+

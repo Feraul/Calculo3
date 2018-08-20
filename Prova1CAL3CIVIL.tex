@@ -1,0 +1,120 @@
+\documentclass[oneside,a4paper,12pt]{article}
+\usepackage[english,brazilian]{babel}
+\usepackage[alf]{abntex2cite}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+\usepackage{lastpage}			  % Usado pela Ficha catalográfica
+\usepackage{indentfirst}		  % Indenta o primeiro parágrafo de cada
+\usepackage[top=20mm, bottom=20mm, left=20mm, right=20mm]{geometry}
+\usepackage{framed}
+\usepackage{booktabs}
+
+\usepackage{float}
+\usepackage{color}				  % Controle das cores
+\usepackage{graphicx}			  % Inclusão de gráficos
+\usepackage{microtype} 		      % para melhorias de justificação
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage[table]{xcolor}
+\usepackage{subfig}
+\usepackage{epstopdf}
+\usepackage{hyperref}
+
+\usepackage[mathcal]{eucal}
+\usepackage{amsmath}               % great math stuff
+\usepackage{amsfonts}              % for blackboard bold, etc
+\usepackage{amsthm}                % better theorem environments
+\usepackage{amssymb}
+\usepackage{mathrsfs}
+\DeclareMathAlphabet{\mathpzc}{OT1}{pzc}{m}{it}
+\usepackage{undertilde}            % botar tilde embaixo da letra
+\usepackage{mathptmx}          % fonte
+\usepackage{graphicx}
+\graphicspath{{./Figuras/}}    
+\definecolor{shadecolor}{rgb}{0.8,0.8,0.8}
+
+
+%FAZ EDICOES AQUI (somente no conteudo que esta entre entre as ultimas  chaves de cada linha!!!)
+\newcommand{\universidade}{Universidade Federal de Pernambuco}
+\newcommand{\centro}{Centro Acadêmico do Agreste}
+\newcommand{\departamento}{Núcleo de Tecnologia}
+\newcommand{\curso}{Engenharia Civil}
+\newcommand{\professor}{Fernando R. L. Contreras}
+\newcommand{\disciplina}{Cálculo Diferencial e Integral 3}
+%ATE AQUI !!!
+
+\begin{document}
+	\pagestyle{empty}
+	
+	\begin{center}
+	\includegraphics[width=\linewidth/6]{logoUFPE.jpg}%LOGOTIPO DA INSTITUICAO
+	 	\vspace{0pt}
+	 	
+		\universidade
+		\par
+		\centro
+		\par
+		\departamento
+		\par
+		\curso
+		\par
+		\vspace{08pt}
+		\large \textbf{Primeira Prova}
+		
+	\end{center}
+	
+	\vspace{1pt}
+	
+	\begin{tabular}{ |l|p{12cm}| }
+		
+		\hline
+		\multicolumn{2}{|c|}{\textbf{Dados de Identificação}} \\
+			\hline
+		Disciplina:        &    \disciplina          \\
+		\hline
+		Professor:         &    \professor           \\
+	\hline
+	Aluno(a):         &\\
+	
+		\hline
+	\end{tabular}
+	
+	\vspace{10pt}
+	\textbf{Justifique todas as suas respostas. Você também será avaliado pela clareza e pela precisão da linguagem utilizada.}
+\begin{itemize}
+\item[1.] Estude a:
+	\begin{itemize}
+	\item[(a)]\textbf{(1.0)} Convergência, convergência absoluta ou divergência da série $\mathlarger{\sum}_{n=2}^{\infty}\frac{(-1)^{n}n^{3}}{n^{4}-1}$.
+	\item[(b)]\textbf{(1.0)} Convergência ou divergência da série $\mathlarger{\sum}_{n=1}^{\infty} n^{2}(1-\cos(\frac{1}{n^{2}})) $.
+	\end{itemize}
+\end{itemize}
+\begin{itemize}
+\item[2.] Seja $f(x)=\mathlarger{\sum}_{n=1}^{\infty}\frac{(n+1)^{2}}{n^{3}}(x-2)^{n}$.
+	\begin{itemize} 
+	\item[(a)]\textbf{(1.5)} Determine os valores de $x\in\mathbb{R}$ tais que $f(x)$ é convergente.
+	\item[(b)]\textbf{(0.5)} Determine $f^{(17)}(2)$, onde $f^{(17)}(x)$ é a décima sétima derivada de $f(x)$.
+    \end{itemize}
+ \end{itemize}
+ \begin{itemize}
+\item [3.] Mostre e Calcule:
+	\begin{itemize}
+	\item[(a)]\textbf{(1.0)} Seja $\left\lbrace a_{n}\right\rbrace $ tal que $a_{n+1}=\frac{3(1+a_{n})}{3+a_{n}}$, $a_{1}=3$. Mostre que $\left\lbrace a_{n}\right\rbrace $ tende a $\quad\sqrt[]{3}$.
+	\item[(b)]\textbf{(1.0)} Calcule $\lim\limits_{n\longrightarrow \infty} n(a^{1/n}-1)$, $a>0$.
+    \end{itemize}
+\end{itemize}
+\begin{itemize}
+\item[4.]\textbf{(2.0)} Seja $T(x,y,z)=4+4x+4y+2z-x^{2}-2y^{2}-z^{2}$ a temperatura no elipsoide sólido $D={(x,y,z)\in\mathbb{R}^{3}: x^{2}+2y^{2}+z^{2}\leq 16}$.
+\begin{itemize} 
+	\item[(a)] Determine os pontos críticos da função $T(x,y,z)$ no interior de $D$.
+	\item[(b)] Utilize o método de multiplicadores de Lagrange para determinar os pontos de temperatura máxima e mínima e o valor da temperatura máxima e mínima na fronteira de $D$ (isto é, na superfície do elipsoide sólido).
+	\item[(c)] Utilize os resultados dos itens (a) e (b) para determinar os pontos de temperatura máxima e mínima e o valor da temperatura máxima e mínima em $D$.
+\end{itemize}
+\end{itemize}
+\begin{itemize} 
+	\item[5.] \textbf{(2.0)} Seja $P_{1}(x,y)$ o polinômio de ordem 1 de $f(x,y)=e^{x+5y}$ em volta de $(0,0)$. Mostre que $\left| f(x,y)-P_{1}(x,y) \right|<\frac{3}{2}\left(x+5y\right)^{2} $ para todo $(x,y)$, com $x+5y<1$.
+\end{itemize} 
+	\flushbottom
+	\flushright
+     Êxitos...!!!
+\end{document}

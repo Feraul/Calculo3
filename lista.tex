@@ -1,0 +1,217 @@
+%% This document created by Scientific Word (R) Version 3.0
+
+%\documentclass[thmsa,11pt]{article}
+\documentclass[12pt,openright,oneside,a4paper,english,french,spanish,brazil]{abntex2}
+
+% ---
+% Pacotes básicos 
+% ---
+\usepackage{lmodern}			  % Usa a fonte Latin Modern			
+\usepackage[T1]{fontenc}		  % Selecao de codigos de fonte.
+\usepackage[utf8]{inputenc}	      % Codificacao do documento (conversão automática dos acentos)
+
+\usepackage{lastpage}			  % Usado pela Ficha catalográfica
+\usepackage{indentfirst}		  % Indenta o primeiro parágrafo de cada seção.
+\usepackage{color}				  % Controle das cores
+\usepackage{graphicx}			  % Inclusão de gráficos
+\usepackage{microtype} 		      % para melhorias de justificação
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage[table]{xcolor}
+\usepackage{subfig}
+\usepackage{epstopdf}
+\usepackage{hyperref}
+\usepackage[alf,bibjustif,abnt-etal-cite=0,abnt-etal-list=0]{abntex2cite} % Citações padrão ABNT
+\usepackage[mathcal]{eucal}
+\usepackage{amsmath}               % great math stuff
+\usepackage{amsfonts}              % for blackboard bold, etc
+\usepackage{amsthm}                % better theorem environments
+\usepackage{amssymb}
+\usepackage{mathrsfs}
+\DeclareMathAlphabet{\mathpzc}{OT1}{pzc}{m}{it}
+\usepackage{undertilde}            % botar tilde embaixo da letra
+\usepackage{mathptmx}          % fonte
+\usepackage{graphicx}
+%tCIDATA{OutputFilter=latex2.dll}
+%tCIDATA{TCIstyle=article/art4.lat,lart,article}
+%tCIDATA{CSTFile=article.cst}
+%tCIDATA{Created=Tue Jan 16 17:54:47 2001}
+%tCIDATA{LastRevised=Sun Feb 16 19:37:46 2003}
+%tCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+\setlength{\textheight}{19.5cm}
+\newtheorem{teorema}{Teorema}[subsection]
+\newtheorem{obs}[teorema]{Observa\c{c}\~{a}o}
+\newtheorem{defini}[teorema]{Defini\c{c}\~{a}o}
+\newtheorem{prop}[teorema]{Proposi\c{c}\~{a}o}
+\newtheorem{corolario}[teorema]{Corol\'{a}rio}
+\newtheorem{lema}[teorema]{Lema}
+\newtheorem{exercicio}[teorema]{Exercício}
+\newenvironment{demons}{\noindent{\bf Demonstração:} }{\hfill $\Box$ \newline}
+\newenvironment{demonsembox}{\noindent{\bf Demonstração:} }{}
+\newenvironment{exemplos}{\noindent {\bf Exemplos:} }{\hfill $\Box$ \newline}
+\newenvironment{exemplo}{\vspace{12pt} \noindent{\bf Exemplo:} }{\hfill $\Box$ \newline}
+\newenvironment{exemplosembox}{\vspace{12pt} \noindent {\bf Exemplos:} }{}
+\newenvironment{demdoteo}{\noindent {\bf Demonstração do Teorema}}{\hfill $\Box$ \newline}
+\newenvironment{demdolem}{\noindent {\bf Demonstração do Lema}}{\hfill $\Box$ \newline}
+\newcommand{\adj}{\mathop{\rm ad}\nolimits}
+\newcommand{\diag}{\mathop{\rm diag}\nolimits}
+\newcommand{\esseo}{\mathop{\rm SO}\nolimits}
+\newcommand{\gera}{\mathop{\rm ger}\nolimits}
+\newcommand{\ident}{\mathop{\rm id}\nolimits}
+\newcommand{\imag}{\mathop{\rm im}\nolimits}
+\newcommand{\partre}{\mathop{\rm Re}\nolimits}
+\newcommand{\partim}{\mathop{\rm Im}\nolimits}
+\newcommand{\trac}{\mathop{\rm tr}\nolimits}
+\hyphenation{con-si-de-ran-do-se ca-sa}
+
+\begin{document}
+
+\author{Cálculo Diferencial e Integral 3\\ Eng. Civil e Produção, 3ro Periodo}
+\title{Lista 1: Sequências, Séries, Séries de Potência e Series de Taylor}
+
+\maketitle
+\begin{enumerate}[]
+\item Mostre que $\mathlarger{\sum}\limits_{n=1}^{\infty} \frac{x^{n}}{n(n+1)}=1+\frac{1-x}{x}\ln(1-x)$, $\left|x \right|<1$ aplicar esta fórmula para somar a série $\mathlarger{\sum}\limits_{n=1}^{\infty}\frac{1}{n(n+1)10^{2n}}$.
+
+
+\item 
+Analise a série $\mathlarger{\sum}\limits_{n=1}^{\infty} \frac{1}{8^{n+1}n!}$, se é convergente calcule a soma .
+
+\item
+	Encontre uma representação em série de potência de $\mathlarger{\int}_{0}^{x} e^{-t^{2}}dt$.
+
+\item
+	Analise a série $\mathlarger{\sum}\limits_{n=1}^{\infty} \frac{1}{log(n)^{k}}$, onde $k$ é constante. .
+\item 
+	Analise a série $\mathlarger{\sum}\limits_{n=1}^{\infty} \frac{2^{n}+n^{2}+n}{n(n+1)2^{n+1}}$ se converge calcule a soma.
+\item
+	Analise a convergência ou divergência da série $\mathlarger{\sum}\limits_{n=1}^{\infty} ln(1+\frac{1}{n(n+2)})$, se caso convergir calcule a soma.
+\item
+	Analise a convergência da série $\mathlarger{\sum}\limits_{n=1}^{\infty} (\frac{1}{n})sen(\frac{n+1}{n}\pi)$.
+\item
+	Analise a convergência ou divergência da série $\frac{1}{2ln(2)}+\frac{1}{3ln(3)}+...$.
+\item
+	Determine se a série $\mathlarger{\sum}\limits_{n=1}^{\infty} \frac{1}{(ln(n))^{ln(n)}} $ é convergente.
+\item
+	Provar que a sequência $\sqrt[]{2}$, $\sqrt[]{2\sqrt[]{2}}$, $\sqrt[]{2\sqrt[]{2\sqrt[]{2}}},...$ converge a $2$.
+\item
+	Se $b_{1}=1$, $b_{n}=\frac{1}{4}(2b_{n-1}+3)$ para $n\geq2$, demostrar que a sequência converge.
+\item
+	Calcular o $\lim\limits_{n->\infty} \frac{(n^2-1)(n^2-2)(n^2-3)...(n^2-n)}{(n^2+1)(n^2+3)(n^2+5)...(n^2+(2n+1))}$.
+\item
+Seja $\{a_{n}\}$ uma sequência tal que $a_{n+1}=\sqrt[]{1+\sqrt[]{a_{n}}}$, $a_{1}=1$, mostre que a sequência é convergente.
+\item
+	Seja $\left\lbrace a_{n}\right\rbrace $ uma sequência tal que $a_{n+1}=\lambda a_{n}$, $\lambda$ constante. Investigue a convergência ou divergência de $\left\lbrace a_{n}\right\rbrace $.
+\item
+	Encontre o desenvolvimento em série de Maclaurin das seguintes funções:\\
+	
+	$(a)$ $\frac{1}{senh(x)}$\\
+	
+	$(b)$ $cosh(x)$\\
+	
+	$(c)$ $\frac{1}{(x+1)(x-1)}$\\
+	
+	$(d)$ $log(1+x)$\\
+	
+	$(e)$ $sen(x^{2}-1)$\\
+	
+	$(f)$ $\mathlarger{\int}_{0}^{x} sen(t^{2}-1)cos(2t^{2}+1)dt$
+	
+\item
+	Considere a função $f:\Re \ {-2} \longrightarrow \Re$, $f(x)=\frac{2x(x-3)}{(x+2)(x^{2}+4)}$:\\
+	
+	$(a)$ Determine o desenvolvimento de Maclaurin de $f$\\
+	
+	$(b)$ Determine $f^{(n)}(0)$, $\forall n\in \aleph$
+\item
+	Com Auxilio da série de potência de $arctg (x)$, mostre que: $\frac{\pi}{6}=\frac{1}{\sqrt{3}}\mathlarger{\sum}\limits_{n=0}^{\infty}\frac{(-1)^{n}}{3^{n}(2n+1)}$.
+\item
+	Represente as integrais $\mathlarger{\int}_{0}^{x} \frac{ln(1-t)}{t}dt$ e $\mathlarger{\int}_{0}^{x}\frac{e^{t}-1}{t}dt$ por séries de potência de $x$, indicando o intervalo de convergência de cada um deles. Em cada caso o integrando em $t=0$ é definido pelo limite quando $t\longrightarrow 0$.
+%\item
+%	Se $a_{n}>1$ para todo $n\in\aleph$. Se a série $\mathlarger{\sum}\limits_{n=0}^{\infty}\frac{a_{n}log(a_{n})}{n^{2}}$ converge, mostre que a série $\mathlarger{\sum}\limits_{n=0}^{\infty} a_{n}\frac{log(n)}{n^{2}}$ converge.
+%\item
+%	Calcular a soma total de:
+%	$\mathlarger{\sum}\limits_{n=1}^{\infty} (-1)^{n-1}\left\lbrace \frac{1}{3n-2}-\frac{1}{3n-1}\right\rbrace $
+\item
+	Investigue a convergência ou divergência das seguintes séries:\\
+	
+	$(a) \mathlarger{\sum}\limits_{n=1}^{\infty} \frac{1}{n^{k}}$\\
+	
+	$(b) \mathlarger{\sum}\limits_{n=1}^{\infty} \frac{1}{n(log(n))^{k}}$. 
+\item
+	Determine o raio de convergência de $\mathlarger{\sum}\limits_{n=1}^{\infty} a_{n}x^{n}$, onde $a_{n}$ é dada nas seguintes equações:\\
+	
+	$(a)\frac{n^{2}(n+1)}{(n+2)3^{n}}$\\
+	
+	$(b)\frac{(2n)!}{(3n)!}$\\
+	
+	$(c)\frac{1}{nlog(n)}$ \\
+	
+	$(d)\frac{(-1)^{n}1.3.5. ... .(2n-1)}{2.4.6. ... 2n}$\\
+	
+	$(e)\frac{1}{3^{n}n}(1+\frac{1}{n})^{n^{2}}$\\
+	
+    Investigue a convergência em cada extremidade do intervalo de convergência.
+\item
+	Expandir $log(1+x)/(1+x)$ em séries de potência.
+
+\end{enumerate}
+\begin{center}
+	\underline{Respostas e Sugestões}
+\end{center}
+\begin{enumerate}
+\item  $\mathlarger{\sum}\limits_{n=1}^{\infty}\frac{1}{n(n+1)10^{2n}}=1+99ln(\frac{99}{100})$
+
+\item 
+$\mathlarger{\sum}\limits_{n=1}^{\infty} \frac{1}{8^{n+1}n!}=\frac{1}{8}(e^{1/8}-1)$
+
+\item
+$\mathlarger{\int}_{0}^{x} e^{-t^{2}}dt=\mathlarger{\sum}\limits_{n=0}^{\infty} \frac{(-1)^{2}x^{2n+1}}{n!(2n+1)} $
+\item
+Sugest. Teste de Comparação.
+\item 
+$\mathlarger{\sum}\limits_{n=1}^{\infty} \frac{2^{n}+n^{2}+n}{n(n+1)2^{n+1}}=1$
+\item
+Sugest. Teste do Limite.
+\item
+Sugest. Teste da Integral.
+\item
+Sugest. Teste da Integral. 
+\item
+Sugest. Teste da Integral.
+\item
+Sugest. Utilize Indução Matemática.
+\item
+\item
+ $\frac{(n^2-1)(n^2-2)(n^2-3)...(n^2-n)}{(n^2+1)(n^2+3)(n^2+5)...(n^2+(2n+1))}=e^{-3/2}$
+\item
+\item
+\item
+
+$(a)$ Sugest. analise $(sinh(x))^{-1}$\\
+
+$(d)$ Sugest. $\frac{d}{dx}log(x+1)=\frac{1}{(x+1)}$\\
+
+\item
+\item
+\item
+$\mathlarger{\int}_{0}^{x} \frac{ln(1-t)}{t}dt=-\mathlarger{\sum}\limits_{n=0}^{\infty} \frac{x^{n+1}}{(n+1)^{2}}$ representação valida para $\left|x \right|<1$ e $\mathlarger{\int}_{0}^{x}\frac{e^{t}-1}{t}dt=\mathlarger{\sum}\limits_{n=1}^{\infty} \frac{x^{n}}{n!n}$, representação válida em qualquer $x$ real.
+%\item
+%\item
+%$\mathlarger{\sum}\limits_{n=1}^{\infty} (-1)^{n-1}\left\lbrace \frac{1}{3n-2}-\frac{1}{3n-1}\right\rbrace =\frac{2}{3}log(2)$
+\item
+
+$(a)$ Diverge se $k<1 $ e Converge se $k>1$\\
+
+$(b)$ Diverge se $k\leq1$ e Converge se $k>1$. . 
+
+\item
+$(a)$ R=1, diverge em $\pm 3$; $(b)$ $R= \infty$; $(c)$ $R=1$, divergente em 1 e convergente -1; $(d)$ $R=1$, diverge em $\pm 1$ e $(e)$ $R=\frac{3}{e}$ 
+\item
+$log(1+x)/(1+x)= -\mathlarger{\sum}\limits_{n=1}^{\infty}(-x)^{n}H_{n}$ onde $H_{n}=\mathlarger{\sum}\limits_{n=1}^{\infty} \frac{1}{k}$.
+\end{enumerate}
+\begin{flushright}
+Êxitos...!
+\end{flushright}
+
+\end{document}

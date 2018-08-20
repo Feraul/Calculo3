@@ -1,0 +1,277 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%    Option test file, will be created during the first LaTeX run:
+\begin{filecontents}{exercise.thm}
+\def\th@exercise{%
+  \normalfont % body font
+  \thm@headpunct{:}%
+}
+\end{filecontents}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[12pt,openright,oneside,a4paper,english,french,spanish,brazil]{article}
+% ---
+% Pacotes básicos 
+% ---
+\usepackage{lmodern}			  % Usa a fonte Latin Modern			
+\usepackage[T1]{fontenc}		  % Selecao de codigos de fonte.
+\usepackage[utf8]{inputenc}	      % Codificacao do documento (conversão automática dos acentos)
+\usepackage[top=20mm, bottom=20mm, left=20mm, right=20mm]{geometry}
+\usepackage{lastpage}			  % Usado pela Ficha catalográfica
+\usepackage{indentfirst}		  % Indenta o primeiro parágrafo de cada seção.
+\usepackage{color}				  % Controle das cores
+\usepackage{graphicx}			  % Inclusão de gráficos
+\usepackage{microtype} 		      % para melhorias de justificação
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage[table]{xcolor}
+\usepackage{subfig}
+\usepackage{epstopdf}
+\usepackage{hyperref}
+\usepackage[mathcal]{eucal}
+\usepackage{amsmath}               % great math stuff
+\usepackage{amsfonts}              % for blackboard bold, etc
+\usepackage{amsthm}                % better theorem environments
+\usepackage{amssymb}
+\usepackage{mathrsfs}
+\DeclareMathAlphabet{\mathpzc}{OT1}{pzc}{m}{it}
+\usepackage{undertilde}            % botar tilde embaixo da letra
+\usepackage{mathptmx}          % fonte
+\usepackage{latexsym}
+\usepackage{makeidx}            % para definir o índice
+\usepackage{epsfig}             % para introduzir figuras no formato eps
+\usepackage{graphicx,color}     % permite a inclusao de figuras
+\usepackage{verbatim}
+\usepackage{gensymb}
+\usepackage{titling}
+\newcommand{\subtitle}[1]{%
+	\posttitle{%
+		\par\end{center}
+	\begin{center}\Large#1\end{center}
+	\vskip0.5em}%
+}
+
+
+
+\newtheorem{df}{Definição}
+\newtheorem{ex}{Exemplo}
+\newtheorem{teo}{Teorema}
+
+\newtheoremstyle{note}% name
+  {3pt}%      Space above
+  {3pt}%      Space below
+  {}%         Body font
+  {}%         Indent amount (empty = no indent, \parindent = para indent)
+  {\itshape}% Thm head font
+  {:}%        Punctuation after thm head
+  {.5em}%     Space after thm head: " " = normal interword space;
+        %       \newline = linebreak
+  {}%         Thm head spec (can be left empty, meaning `normal')
+
+\theoremstyle{note}
+\newtheorem{note}{Note}
+
+\newtheoremstyle{citing}% name
+  {3pt}%      Space above, empty = `usual value'
+  {3pt}%      Space below
+  {\itshape}% Body font
+  {}%         Indent amount (empty = no indent, \parindent = para indent)
+  {\bfseries}% Thm head font
+  {.}%        Punctuation after thm head
+  {.5em}%     Space after thm head: " " = normal interword space;
+        %       \newline = linebreak
+  {\thmnote{#3}}% Thm head spec
+
+\theoremstyle{citing}
+\newtheorem*{varthm}{}% all text supplied in the note
+
+\newtheoremstyle{break}% name
+  {9pt}%      Space above, empty = `usual value'
+  {9pt}%      Space below
+  {\itshape}% Body font
+  {}%         Indent amount (empty = no indent, \parindent = para indent)
+  {\bfseries}% Thm head font
+  {.}%        Punctuation after thm head
+  {\newline}% Space after thm head: \newline = linebreak
+  {}%         Thm head spec
+
+\theoremstyle{break}
+\newtheorem{bthm}{B-Theorem}
+
+\theoremstyle{exercise}
+\newtheorem{exer}{Exercise}
+
+\swapnumbers
+\theoremstyle{plain}
+\newtheorem{thmsw}{Theorem}[section]
+%\newtheorem{corsw}[thm]{Corollary}
+\newtheorem{propsw}{Proposition}
+%\newtheorem{lemsw}[thm]{Lemma}
+
+%    Because the amsmath pkg is not used, we need to define a couple of
+%    commands in more primitive terms.
+\let\lvert=|\let\rvert=|
+\newcommand{\Ric}{\mathop{\mathrm{Ric}}\nolimits}
+
+%    Dispel annoying problem of slightly overlong lines:
+\addtolength{\textwidth}{8pt}
+
+\title{ \textbf{Notas de Aula}}
+
+\author{\textbf{Fernando Contreras}\\
+	\large Nucleo de Tecnologia\\
+	Universidade Federal de Pernambuco (UFPE)}
+
+
+
+\begin{document}
+	\begin{center}
+		Universidade Federal de Pernambuco (UFPE)\\
+		Centro Acadêmico do Agreste\\
+		Núcleo de Tecnologia\\
+		
+		Lista 2 de Calculo Diferencial e Integral 3\\
+		Prof. Fernando RL Contreras
+	\end{center}
+
+
+Sejam os seguintes problemas relativos a Séries, Séries de potências e Séries de Taylor.
+
+%\begin{multicols}{2}
+
+\begin{itemize}
+	\item[1.] Determine se a série é convergente ou divergente 
+	\begin{itemize}
+	\item[a.] $\sum_{n=1}^{\infty}\frac{1}{2n}$
+	%problema 21 pag. 658, stewart	
+	\item[b.] $\sum_{n=1}^{\infty}\frac{1+3^{n}}{2^{n}}$
+	%problema 26 pag. 658, stewart	
+    \end{itemize}	
+\end{itemize}
+\begin{itemize}
+	\item[2.] Pelo teste da integral determine se a série é convergente ou divergente.   
+	\begin{itemize}
+		\item[a.] $\sum_{n=1}^{\infty}\frac{1}{n^{2}-4n+5}$
+		%problema 20 pag. 667, stewart	
+		\item[b.] $\sum_{n=1}^{\infty}\frac{e^{1/2}}{n^{2}}$
+		%problema 23 pag. 667, stewart	
+	\end{itemize}
+\end{itemize}
+\begin{itemize}
+	\item [3.] Pelo teste de comparação ou teste do limite determine a convergência ou divergência das séries: 
+	\begin{itemize}
+		\item[a.] $\sum_{n=1}^{\infty}\frac{n-1}{n^{2}\sqrt{n}}$
+		%problema 6 pag. 672, stewart	
+		\item[b.] $\sum_{n=1}^{\infty}\frac{1+4^{n}}{1+3^{n}}$
+		%problema 19 pag. 672, stewart	
+		\item[c.] $\sum_{n=1}^{\infty}\frac{n+5}{\sqrt[3]{n^{7}+n^{2}}}$
+		%problema 26 pag. 672, stewart
+	\end{itemize}
+		
+\end{itemize}
+\begin{itemize}
+	\item[4.] Teste a Série quanto a convergência ou divergência
+	\begin{itemize}
+	\item[a.] $\sum_{n=1}^{\infty}\frac{\cos (n\pi)}{n^{3/4}}$
+	%problema 15 pag. 677, stewart	
+	\item[b.] $\sum_{n=1}^{\infty}(-1)^{n}\sin (\frac{\pi}{n})$
+	%problema 17 pag. 677, stewart	
+    \end{itemize}
+\end{itemize}
+\begin{itemize}
+	\item[5.] Os termos da série são definidos recursivamente pelas equações $a_{1}=2$, $a_{n+1}=\frac{5n+1}{4n-3}a_{n}$. Determine se $\sum_{}^{} a_{n}$ converge ou diverge.
+	%problema 29 pag. 683, stewart
+\end{itemize}
+
+\begin{itemize}
+	\item[6.] Uma série $\sum_{}^{} a_{n}$ é definida pelas equações $a_{1}=2$, $a_{n+1}=\frac{2+\cos (n)}{\sqrt{n}}a_{n}$. Determine se $\sum_{}^{} a_{n}$ converge ou diverge.
+	% %problema 30 pag. 683, stewart
+\end{itemize}
+\begin{itemize}
+	\item[7.] Encontre o raio de convergência e o intervalo de convergência das série de potência.
+	\begin{itemize}
+		\item[a.] $\sum_{n=2}^{\infty}\frac{(-1)^{n}x^{n}}{4^{n}\ln (n)}$
+		%problema 13 pag. 691, stewart	
+		\item[b.] $\sum_{n=0}^{\infty}\frac{(-1)^{n}(x-3)^{n}}{2n+1}$
+		%problema 16 pag. 691, stewart	
+		\item[c.] $\sum_{n=1}^{\infty}\frac{(x-2)^{n}}{n^{n}}$
+		%problema 19 pag. 691, stewart
+	    \item[d.] $\sum_{n=1}^{\infty}\frac{n^{2}x^{n}}{2.4.6. ... .(2n)}$
+		%problema 24 pag. 691, stewart
+	\end{itemize}
+\end{itemize}
+\begin{itemize}
+	\item[8.]  Se $k$ for um inteiro positivo, encontre o raio de convergência  ou divergência da série $\sum_{n=0}^{\infty}\frac{(n!)^{k}}{(kn)!}x^{n}$ 
+	%problema 31 pag. 691, stewart
+\end{itemize}
+\begin{itemize}
+	\item[9.] A função $J_{1}$ definida por $J_{1}=\sum_{n=0}^{\infty}\frac{(-1)^{n}x^{2n+1}}{n!(n+1)!2^{2n+1}}$ denominado função de Bessel de ordem 1. Encontre seu domínio.
+	%problema 35 pag. 692, stewart
+\end{itemize}
+\begin{itemize}
+	\item[10.]Encontre uma representação em serie de potencia para a função e determine o intervalo de convergência.
+	 \begin{itemize}
+	 	\item[a.] $f(x)=\frac{1+x}{1-x}$
+	 	%problema 9 pag. 697, stewart	
+	 	\item[b.] $f(x)=\frac{1}{x+10}$
+	 	%problema 6 pag. 697, stewart	
+	 	\item[c.] $f(x)=\frac{x}{9+x^{2}}$
+	 	%problema 7 pag. 697, stewart
+	 	\item[d.] $f(x)=\frac{3}{1-x^{4}}$
+	 	%problema 4 pag. 697, stewart
+	 \end{itemize}
+\end{itemize}
+\begin{itemize}
+	\item[11.] Use a derivação para encontrar a representação em série de potência para:
+	\begin{itemize}
+		\item[a.] $f(x)=\frac{1}{(1+x)^{2}}$
+		%problema 13a pag. 697, stewart	
+		\item[b.] $f(x)=\frac{1}{(1+x)^{3}}$
+		%problema 13b pag. 697, stewart	
+		\item[c.] $f(x)=\frac{x^{2}}{(1+x)^{3}}$
+		%problema 13c pag. 697, stewart
+	\end{itemize}
+Qual é o raio de convergência?
+\end{itemize}
+\begin{itemize}
+	\item [12.] Calcule a integral indefinida como uma série de potências. Qual é o raio de convergência?
+	\begin{itemize}
+		\item[a.] $\int\frac{t}{1-t^{8}}dt$
+		%problema 23 pag. 697, stewart	
+		\item[b.] $\int\frac{\ln (1-t)}{t}dt$
+		%problema 24 pag. 697, stewart	
+	\end{itemize} 
+\end{itemize}
+\begin{itemize}
+	\item [13.] Mostre que a função $f(x)=\sum_{n=0}^{\infty}\frac{x^{n}}{n!}$ é solução da equação diferencial $f'(x)=f(x)$. E mostre que $f(x)=e^{x}$.
+	%problema 35 pag. 698, stewart
+\end{itemize}
+\begin{itemize}
+	\item [14.] Mostre que a função $f(x)=\sum_{n=0}^{\infty} \frac{(-1)^{n}x^{2n}}{(2n)!}$ é uma solução da equação diferencial $f''(x)+f(x)=0$
+		%problema 32 pag. 697, stewart
+\end{itemize}
+\begin{itemize}
+	\item [14.] Determine o polinômio de Taylor de ordem 1 da função dada, em volta do ponto $(x_{0},y_{0})$ dado por 
+	\begin{itemize}
+		\item[a.] $f(x,y)=e^{x+5y}$ e $(x_{0},y_{0})=(0,0)$
+		%problema a pag. 302, Guidorizzi vol2
+		\item[b.] $f(x,y)=x^{3}+y^{3}-x^{2}+4y$ e $(x_{0},y_{0})=(1,1)$
+		%problema b pag. 302, Guidorizzi vol2
+		\item[c.] $f(x,y)=\sin (3x+4y)$ e $(x_{0},y_{0})=(0,0)$
+		%problema c pag. 302, Guidorizzi vol2	
+	\end{itemize}    
+\end{itemize}
+\begin{itemize}
+	\item [15.] Determine o polinômio de Taylor de ordem 2 da função dada, em volta do ponto $(x_{0},y_{0})$ dado por 
+	\begin{itemize}
+		\item[a.] $f(x,y)=x\sin (y)$ e $(x_{0},y_{0})=(0,0)$
+		%problema a pag. 305, Guidorizzi vol2
+		\item[b.] $f(x,y)=x^{3}+2x^{2}y+3y^{3}+x-y$ e $(x_{0},y_{0})=(1,1)$
+		%problema b pag. 305, Guidorizzi vol2
+	\end{itemize}
+\end{itemize}
+\begin{itemize}
+	\item [16.] Seja $P_{2}(x,y)$ o polinômio de Taylor de ordem 2 de $f(x,y)=x\sin (y)$ em volta de $(0,0)$. Mostre que $\left|f(x,y)-P_{2}(x,y) \right|<\frac{\left| y\right| ^{2}}{2}\left[\left| x\right| +\frac{1}{3} \left|y \right| \right]  $
+	%problema 3 pag. 305, Guidorizzi vol2
+\end{itemize}
+\end{document}

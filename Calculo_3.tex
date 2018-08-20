@@ -1,0 +1,482 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%    Option test file, will be created during the first LaTeX run:
+\begin{filecontents}{exercise.thm}
+\def\th@exercise{%
+  \normalfont % body font
+  \thm@headpunct{:}%
+}
+\end{filecontents}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[12pt,openright,oneside,a4paper,english,french,spanish,brazil]{article}
+\setlength{\oddsidemargin}{0.25 in}
+\setlength{\evensidemargin}{-0.25 in}
+\setlength{\topmargin}{-0.6 in}
+\setlength{\textwidth}{6.5 in}
+\setlength{\textheight}{8.5 in}
+\setlength{\headsep}{0.75 in}
+\setlength{\parindent}{0 in}
+\setlength{\parskip}{0.1 in}
+% ---
+% Pacotes básicos 
+% ---
+\usepackage{lmodern}			  % Usa a fonte Latin Modern			
+\usepackage[T1]{fontenc}		  % Selecao de codigos de fonte.
+\usepackage[utf8]{inputenc}	      % Codificacao do documento (conversão automática dos acentos)
+\usepackage{lastpage}			  % Usado pela Ficha catalográfica
+\usepackage{indentfirst}		  % Indenta o primeiro parágrafo de cada seção.
+\usepackage{color}				  % Controle das cores
+\usepackage{graphicx}			  % Inclusão de gráficos
+\usepackage{microtype} 		      % para melhorias de justificação
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage[table]{xcolor}
+\usepackage{subfig}
+\usepackage{epstopdf}
+\usepackage{hyperref}
+\usepackage[mathcal]{eucal}
+\usepackage{amsmath}               % great math stuff
+\usepackage{amsfonts}              % for blackboard bold, etc
+\usepackage{amsthm}                % better theorem environments
+\usepackage{amssymb}
+\usepackage{mathrsfs}
+\DeclareMathAlphabet{\mathpzc}{OT1}{pzc}{m}{it}
+\usepackage{undertilde}            % botar tilde embaixo da letra
+\usepackage{mathptmx}          % fonte
+\usepackage{latexsym}
+\usepackage{makeidx}            % para definir o índice
+\usepackage{epsfig}             % para introduzir figuras no formato eps
+\usepackage{graphicx,color}     % permite a inclusao de figuras
+\usepackage{verbatim}
+\usepackage{gensymb}
+\usepackage{titling}
+\newcommand{\subtitle}[1]{%
+	\posttitle{%
+		\par\end{center}
+	\begin{center}\Large#1\end{center}
+	\vskip0.5em}%
+}
+
+
+
+\newtheorem{df}{Definição}
+\newtheorem{ex}{Exemplo}
+\newtheorem{teo}{Teorema}
+
+\newtheoremstyle{note}% name
+  {3pt}%      Space above
+  {1pt}%      Space below
+  {}%         Body font
+  {}%         Indent amount (empty = no indent, \parindent = para indent)
+  {\itshape}% Thm head font
+  {:}%        Punctuation after thm head
+  {.5em}%     Space after thm head: " " = normal interword space;
+        %       \newline = linebreak
+  {}%         Thm head spec (can be left empty, meaning `normal')
+
+\theoremstyle{note}
+\newtheorem{note}{Note}
+
+\newtheoremstyle{citing}% name
+  {3pt}%      Space above, empty = `usual value'
+  {3pt}%      Space below
+  {\itshape}% Body font
+  {}%         Indent amount (empty = no indent, \parindent = para indent)
+  {\bfseries}% Thm head font
+  {.}%        Punctuation after thm head
+  {.5em}%     Space after thm head: " " = normal interword space;
+        %       \newline = linebreak
+  {\thmnote{#3}}% Thm head spec
+
+\theoremstyle{citing}
+\newtheorem*{varthm}{}% all text supplied in the note
+
+\newtheoremstyle{break}% name
+  {9pt}%      Space above, empty = `usual value'
+  {3pt}%      Space below
+  {\itshape}% Body font
+  {}%         Indent amount (empty = no indent, \parindent = para indent)
+  {\bfseries}% Thm head font
+  {.}%        Punctuation after thm head
+  {\newline}% Space after thm head: \newline = linebreak
+  {}%         Thm head spec
+
+\theoremstyle{break}
+\newtheorem{bthm}{B-Theorem}
+
+\theoremstyle{exercise}
+\newtheorem{exer}{Exercise}
+
+\swapnumbers
+\theoremstyle{plain}
+\newtheorem{thmsw}{Theorem}[section]
+%\newtheorem{corsw}[thm]{Corollary}
+\newtheorem{propsw}{Proposition}
+%\newtheorem{lemsw}[thm]{Lemma}
+
+%    Because the amsmath pkg is not used, we need to define a couple of
+%    commands in more primitive terms.
+\let\lvert=|\let\rvert=|
+\newcommand{\Ric}{\mathop{\mathrm{Ric}}\nolimits}
+
+%    Dispel annoying problem of slightly overlong lines:
+\addtolength{\textwidth}{8pt}
+
+\title{ \textbf{Notas de Aula}}
+\subtitle{\textbf{Cálculo Diferencial e Integral 3}}
+\author{\textbf{Fernando RL Contreras}\\
+	\large Nucleo de Tecnologia\\
+	Universidade Federal de Pernambuco (UFPE)}
+
+\begin{document}
+\maketitle
+\newpage
+\begin{center}
+\section{Sequências}
+\end{center}
+Exemplos de motivação
+\vspace*{4cm}
+\begin{df}
+	Entendemos por sequência infinita uma função $S$ cujo domínio é o conjunto $\left\lbrace 1, 2,3,...\right\rbrace $ de todos os inteiros positivos. O contradomínio de $S$, é o conjunto $\left\lbrace S(1), S(2),S(3),...\right\rbrace $ também podemos escrever como  $\left\lbrace S_{1}, S_{2},S_{3},...\right\rbrace $, e  o valor da função $S_{n}$ chama-se o termo n-ésimo da sequência.
+\end{df}
+
+Uma sequência infinita $S_{1}, S_{2}, ...,S_{n},...$ pode ser representado por $\left( S_{n} \right)^{\infty}_{n=1} $ ou por $\left( S_{n}\right) $. Graficamente temos:
+\vspace*{4cm}
+\begin{ex} Nos exemplos a seguir, damos três descrições da sequência, uma usando a notação anterior, outra empregando a formulação da definição e uma terceira escrevendo os termos da sequência 
+\end{ex}
+\begin{itemize}
+	\item $\left( \frac{n}{n+1}\right)^{\infty}_{n=1}$\quad \quad$\left( \frac{n}{n+1}\right)$, $n\geq1$ \quad \quad $\frac{1}{2}, \frac{2}{3},\frac{3}{4},...,\frac{n}{n+1},...$
+	\item $\left( \sqrt{n-3}\right)^{\infty}_{n=3}$ \quad\quad$\left( \sqrt{n-3}\right)$, $n \geq3$\quad\quad $-\frac{2}{3}, \frac{3}{9},-\frac{4}{27},...,\frac{(-1)^{n}(n+1)}{3^{n}},...$
+	\item $\left( \cos (\frac{n\pi}{6})\right)^{\infty}_{n=0}$\quad\quad $\left( \cos (\frac{n\pi}{6})\right)$, $n\geq 0$\quad\quad $1,\frac{\sqrt{3}}{2},\frac{1}{2},...,\cos (\frac{n\pi}{6}),...$
+\end{itemize}
+
+\begin{ex} calcule o n-ésimo termo da sequência $1,3,6,15,21,...$.
+\end{ex}
+\textit{Solução.}
+\vspace*{5cm}
+\begin{df}
+uma sequência $\left( S_{n}\right) $ é denominado crescente se $S_{n}\leq S_{n+1}$, para todo $n\geq1$, isto é, $S_{1}<S_{2}<S_{3}...$. É chamado decrescente se $S_{n} \geq S_{n+1}$ para todo $n\geq1$. É dita monótona se for crescente ou decrescente.  
+\end{df}
+\begin{ex} Mostre que a sequência ${\frac{n}{n^{2}+1}}$ é decrescente.
+\end{ex}
+\textit{Solução.}
+\vspace*{5cm}
+\begin{df}
+	uma sequência $\left( S_{n}\right) $ é limitada superiormente se existe um número $
+	M$ tal que $S_{n}\leq M$, para todo $n\geq 1$. 
+\end{df}
+\begin{ex}
+	
+	\begin{itemize} 
+	\item A sequência $\left( n\right) $ é limitada inferiormente, mas não superiormente.
+	\item A sequência $\left( \frac{n}{n+1}\right)$ é limitada porque $0<S_{n}<1$, onde $S_{n}=\frac{n}{n+1}$, para todo $n$.
+   \end{itemize}
+\end{ex}
+agora vamos desenhar a sequência dada no exemplo anterior
+\vspace*{5cm}
+
+Nas figuras anteriores podemos observar que a sequência $\left( \frac{n}{n+1}\right)$estão se aproximando de 1 quando $n$ se torna grande. De fato a diferença $1-\frac{n}{n+1}$ pode ficar tão pequeno quanto se desejar tornando-se $n$ suficientemente grande. 
+\begin{df}
+	uma sequência $\left( S_{n}\right) $ tem limite $L$, se para todo $\epsilon >0$ existe um número $N>0$, tal que $\left| S_{n}-L\right| < \epsilon$, para todo $n>N$ e denotaremos com $\lim\limits_{n\longrightarrow \infty} S_{n}=L$.
+\end{df}
+Em forma simbólica temos:
+\vspace*{5cm}
+\\
+\textbf{Propriedades}\\
+Se $\left( S_{n}\right)$ e $\left( T_{n}\right)$ forem sequências convergentes e $c$ uma constante, então:
+\begin{itemize} 
+	\item $\lim\limits_{n\longrightarrow \infty} \left( S_{n}\pm T_{n}\right) =\lim\limits_{n\longrightarrow \infty}  S_{n}\pm\lim\limits_{n\longrightarrow \infty}  T_{n}$.
+	\item $\lim\limits_{n\longrightarrow \infty} cS_{n} =c\lim\limits_{n\longrightarrow \infty}  S_{n}$.
+	\item $\lim\limits_{n\longrightarrow \infty} S_{n} T_{n} =\lim\limits_{n\longrightarrow \infty}  S_{n}\lim\limits_{n\longrightarrow \infty}  T_{n}$.
+	\item $\lim\limits_{n\longrightarrow \infty} \frac{S_{n} }{T_{n}} =\frac{\lim\limits_{n\longrightarrow \infty}  S_{n}}{\lim\limits_{n\longrightarrow \infty}  T_{n}}$, $\lim\limits_{n\longrightarrow \infty}  T_{n}\neq 0 $.
+	\item $\lim\limits_{n\longrightarrow \infty} cS_{n} =c\lim\limits_{n\longrightarrow \infty}  S_{n}$
+	\item $\lim\limits_{n\longrightarrow \infty} S_{n}^{p}=\left(\lim\limits_{n\longrightarrow \infty}S_{n} \right)^{p} $, $p>0$ e $S_{n}>0$.
+\end{itemize}
+\begin{ex} 
+Determine $\lim\limits_{n\longrightarrow \infty} \frac{3n^{2}-5n+2}{n^{2}+7n-4}$
+\end{ex}
+\textit{Solução.}
+\vspace*{5cm}
+\begin{ex} 
+	calcule $\lim\limits_{n\longrightarrow \infty} \frac{n}{n+1}$
+\end{ex}
+\textit{Solução.}
+\vspace*{5cm}
+\begin{teo} 
+Sejam as sequências $\left( S_{n}\right) $, $\left( R_{n}\right) $ e $\left( T_{n}\right) $. Se para todos os inteiros positivos n, $S_{n}\leq R_{n} \leq T_{n}$ e se $\lim\limits_{n\longrightarrow \infty} S_{n} =\lim\limits_{n\longrightarrow \infty} T_{n}=L$, então a sequência $\left( R_{n}\right) $ converge e $\lim\limits_{n\longrightarrow \infty} R_{n}=L$.
+\end{teo}
+\begin{ex} 
+	Prove que $\lim\limits_{n\longrightarrow \infty} \frac{\sin (n)}{n}=0$
+\end{ex}
+\textit{Solução.}
+\vspace*{3cm}
+\\
+\\
+\\
+
+\begin{teo} 
+	Seja a sequência $\left( S_{n}\right) $. Se $\lim\limits_{n\longrightarrow \infty} \left| S_{n} \right| =0$, então  $\lim\limits_{n\longrightarrow \infty} S_{n}=0$.
+\end{teo}
+\begin{ex} 
+	calcule $\lim\limits_{n\longrightarrow \infty} \frac{(-1)^{n}}{n}=0$ se ele existir.
+\end{ex}
+\textit{Solução.}
+\vspace*{5cm}
+\\
+\\
+\\
+\\
+
+\begin{teo} 
+	Seja a sequência $\left( S_{n}\right) $. Se $\lim\limits_{n\longrightarrow \infty} S_{n}  =L$, e se a função $f$ for continua em $L$, então  $\lim\limits_{n\longrightarrow \infty} f(S_{n})=f(L)$.
+\end{teo}
+\begin{ex} 
+	Calcule o $\lim\limits_{n\longrightarrow \infty} \sin(\frac{\pi}{n})$.
+\end{ex}
+\textit{Solução.}
+\vspace*{5cm}
+\\
+\\
+\\
+
+\begin{ex}
+	Para que valores de r a sequência $\left( r^{n}\right) $ é convergente.
+\end{ex}
+\textit{Solução.}
+\vspace*{15cm}
+
+\begin{ex}\label{exemplo1}
+	Determine a sequência $\left( (-1)^{n}\right) $ é convergente ou divergente.
+\end{ex}
+\textit{Solução.}
+\vspace*{2.5cm}
+\\
+
+Do exemplo \ref{exemplo1} sabemos que nem toda sequência limitada é convergente. E também sabemos que nem toda sequência monótona é convergente. Mas se uma sequência for limitada e e monótona, então ela deve ser convergente. Esse fato é mostrado no seguinte teorema.
+\begin{teo} 
+	Toda sequência monótona e limitada é convergente.
+\end{teo}
+\begin{ex}
+	Investigue a sequência $\left( S_{n}\right) $ definida pela relação de recorrência $S_{1}=2$, $S_{n+1}=\frac{1}{2}(S_{n}+6)$ para $n=1,2,3,...$.
+\end{ex}
+\textit{Solução.}
+\vspace*{10cm}
+
+\newpage
+\textbf{Propriedade auxiliares}
+\begin{itemize}
+	\item Se  $\lim\limits_{n\longrightarrow \infty} S_{n}=L$, então $\lim\limits_{n\longrightarrow \infty} S_{n+k}=L$ para todo $k\in \mathbb{N} $
+	\item $\lim\limits_{n\longrightarrow \infty} \left|  S_{n}\right|  =\left| \lim\limits_{n\longrightarrow \infty}  S_{n}\right| $.
+	\item Se $S_{n}\geq 0$, então $\lim\limits_{n\longrightarrow \infty} S_{n} \geq 0$.
+	\item Se $S_{n}\geq T_{n}$, então $\lim\limits_{n\longrightarrow \infty} S_{n} \geq \lim\limits_{n\longrightarrow \infty}T_{n}$.
+	\item Se $S_{n}\geq 0$, então $\lim\limits_{n\longrightarrow \infty} \sqrt{S_{n}} =\sqrt{\lim\limits_{n\longrightarrow \infty} S_{n} }$.
+\end{itemize}
+\begin{ex}
+	Calcule $\lim\limits_{n\longrightarrow \infty}\sqrt{\frac{4n^{2}+6n+3}{n^{2}-5}} $.
+\end{ex}
+\textit{Solução.}
+\vspace*{5cm}
+\begin{teo} 
+	Se $\lim\limits_{x\longrightarrow \infty} f(x)=L$ e $f(n)=S_{n}$, então $\lim\limits_{x\longrightarrow \infty} S_{n}=L$
+\end{teo}
+\begin{ex}
+	Calcule $\lim\limits_{n\longrightarrow \infty}\frac{\ln (n)}{n} $.
+\end{ex}
+\textit{Solução.}
+\vspace*{5cm}
+\begin{center}
+\section{Séries}
+\end{center}
+Breve introdução
+\vspace*{5cm}
+\begin{df}
+	Seja $\left( a_{n}\right) $ uma sequência dada de numeros reais. Formemos uma nova sequência $\left( s_{n}\right) $ como segue:\\
+	$s_{n}=a_{1}+a_{2}+...+a_{n}=\sum_{k=1}^{n} a_{k}$, $n=1,2,...$\\
+	Uma sequência $\left( s_{n}\right)$ formada de esta maneira é chamada série, onde o número $s_{n}$ é a soma parcial n-ésima da série e $a_{n}$ é o termo n-ésimo da série.
+\end{df}
+\begin{df}
+	uma sequência $\left( s_{n}\right)$ converge ao ponto $s$, então dizemos que a série $\sum_{k=1}^{\infty} a_{k}$ tem soma $s$ ou que é o mesmo dizer que $\sum_{k=1}^{\infty} a_{k}$ converge a $s$.\\
+	Se a série $\sum_{k=1}^{\infty} a_{k}$ tem a soma $s$, então $s=\lim\limits_{n\longrightarrow \infty} s_{n}$, onde $s_{n}=\sum_{k=1}^{n} a_{k}$.
+\end{df}
+\begin{ex}
+	calcule a soma da série geométrica $\sum_{n=1}^{\infty}ar^{n-1}$.\\
+	Solução.
+\end{ex}
+\vspace*{15cm}
+
+\begin{ex}
+	A série geométrica $\sum_{n=1}^{\infty}\frac{2^{2n}}{3^{1-n}}$ é convergente ou divergente?\\
+	Solução.
+\end{ex}
+\vspace*{5cm}
+
+\begin{ex}
+	A série harmônica $\sum_{n=1}^{\infty}\frac{1}{n}$ é divergente?\\
+	Solução.
+\end{ex}
+\vspace*{5cm}
+
+\begin{teo}
+	Se a série $\sum_{n=1}^{\infty} a_{n}$ é convergente, então $\lim\limits_{n\longrightarrow \infty} a_{n}=0$.\\
+	Prova.
+\end{teo}
+\vspace*{5cm}
+
+Uma consequência do teorema é: se o $\lim\limits_{n\longrightarrow \infty} a_{n}$ não existir ou se $\lim\limits_{n\longrightarrow \infty} a_{n}\neq 0$, então a série  $\sum_{n=1}^{\infty} a_{n}$ é divergente.
+\begin{ex}
+	mostre que a série $\sum_{n=1}^{\infty}\frac{n^{2}}{5n^{2}+4}$ divergente.\\
+	Solução.
+\end{ex}
+\vspace*{5cm}
+
+\textbf{Propriedades} 
+Se $\sum_{n=1}^{\infty} a_{n}$ e $\sum_{n=1}^{\infty} b_{n}$ forem séries convergentes, então também o serão as séries $\sum_{n=1}^{\infty} ca_{n}$ (onde $c$ é uma constante) e $\sum_{n=1}^{\infty} a_{n}\pm b_{n}$ e
+\begin{itemize}
+\item[i.] $\sum_{n=1}^{\infty} ca_{n}=c\sum_{n=1}^{\infty} a_{n}$
+
+\item[ii.] $\sum_{n=1}^{\infty} a_{n}\pm b_{n}=\sum_{n=1}^{\infty} a_{n}\pm \sum_{n=1}^{\infty} b_{n}$.
+\end{itemize}
+
+\begin{ex}
+	Calcule a soma da série $\sum_{n=1}^{\infty}\frac{3}{n(n+1)}+\frac{1}{2^{n}}$ \\
+	Solução.
+\end{ex}
+\subsection{Teste de convergência para séries numéricas com termos positivos}
+Seja $\sum_{n=1}^{\infty}a_{n}$, onde $a_{n}\geq 0$:\\
+$a_{1}=s_{1}$\\
+$a_{2}=s_{1}+s_{2}$\\
+$a_{3}=s_{1}+s_{2}+s_{3}$\\
+$a_{4}=s_{1}+s_{2}+s_{3}+s_{4}$\\
+...\\
+$a_{n}=s_{1}+s_{2}+s_{3}+s_{4}+...+s_{n}$\\
+....\\
+
+$a_{1}\leq a_{2}\leq a_{3} \leq a_{4}\leq ...\leq a_{n}\leq...$\\
+
+Portanto $\{a_{n}\}$ é sequencia de somas parciais monótonas.
+\subsubsection{Teste de comparação direta}
+Sejam as séries $\sum_{n=1}^{\infty}a_{n}$ e $\sum_{n=1}^{\infty}b_{n}$\\
+\begin{itemize}
+	\item[1.] Se $\sum_{n=1}^{\infty}b_{n}$ Converge e $0\leq a_{n}\leq b_{n}$, então $\sum_{n=1}^{\infty}a_{n}$ Converge.
+	
+	\item[2.]Se $\sum_{n=1}^{\infty}a_{n}$ Diverge e $0\leq a_{n}\leq b_{n}$, então $\sum_{n=1}^{\infty}b_{n}$ Diverge.
+\end{itemize}
+\underline{Prova}\\
+\vspace*{5cm}
+
+\textbf{\textit{\underline{Nota}}}: Ao usar este Teste de comparação direta, devemos  ter algumas séries conhecidas $\sum_{n=1}^{\infty}b_{n}$ para o proposito de comparação. Usualmente se utiliza uma P-série ou uma série geométrica.
+
+\begin{ex}
+	Estude das séries $\sum_{n=1}^{\infty}\frac{1}{n2^{n}}$ e  $\sum_{n=1}^{\infty}\frac{1}{2^{n}+1}$\\
+	Solução.
+\end{ex}
+\vspace*{5cm}
+\subsubsection{Teste da integral}
+Suponha que $f$ seja uma função continua, positiva e decrescente em $[1,\infty)$ e seja $a_{n}=f(n)$. Então, a série $\sum_{n=1}^{\infty}a_{n}$ é convergente se e somente se a integral impropria $\int_{1}^{\infty}f(x)dx$ for convergente. Em outras palavras:\\
+
+\begin{itemize}
+	\item[i.] Se $\int_{1}^{\infty}f)(x)dx$ for convergente, então $\sum_{n=1}^{\infty}a_{n}$ é convergente.
+	\item[ii.] Se $\int_{1}^{\infty}f)(x)dx$ for divergente, então $\sum_{n=1}^{\infty}a_{n}$ é divergente
+\end{itemize}
+\begin{ex}
+	Para que valores de p a série $\sum_{n=1}^{\infty}\frac{1}{n^{p}}$ é convergente ?\\
+	Solução.
+\end{ex}
+\vspace*{8cm}
+\subsubsection{Teste de limite}
+Sejam as séries $\sum_{n=1}^{\infty}a_{n}$ e $\sum_{n=1}^{\infty}b_{n}$: \\
+\begin{itemize}
+	\item[i.] Se $\lim\limits_{n\rightarrow \infty}\frac{a_{n}}{b_{n}}$, então $\sum_{n=1}^{\infty}a_{n}$ e $\sum_{n=1}^{\infty}b_{n}$ divergente ou convergente.
+	\item[ii.] Se $\lim\limits_{n\rightarrow \infty}\frac{a_{n}}{b_{n}}=0$ e se $\sum_{n=1}^{\infty}b_{n}$ convergente, então $\sum_{n=1}^{\infty}a_{n}$ é convergente.
+	\item[iii.] Se $\lim\limits_{n\rightarrow \infty}\frac{a_{n}}{b_{n}}=\infty$ e se $\sum_{n=1}^{\infty}b_{n}$ divergente, então $\sum_{n=1}^{\infty}a_{n}$ é divergente.
+\end{itemize} 
+\begin{ex}
+	Estude a convergência ou divergência da série $\sum_{n=1}^{\infty}\frac{1}{n^{n}}$.\\
+	Solução.
+\end{ex}
+\vspace*{7cm}
+\subsection{Séries alternadas}
+Uma série numérica da forma seguinte:\\
+
+$\sum_{n=1}^{\infty}(-1)^{n-1}a_{n}=a_{n}-a_{2}+a_{3}-a_{4}+...+(-1)^{n-1}a_{n}+...$\\
+onde $a_{n}>0$, para todo $n\in \mathbb{N}$, denomina-se série alternada.
+\subsubsection{Teste da série alternada (Critério da Leibniz)} 
+
+A série alternada da forma: \\
+
+$\sum_{n=1}^{\infty}(-1)^{n-1}a_{n}=a_{n}-a_{2}+a_{3}-a_{4}+...+(-1)^{n-1}a_{n}+...$, é convergente se 
+\begin{itemize}
+	\item[i.] $a_{n+1}\leq a_{n}$.
+	\item[ii.] $\lim\limits_{n\rightarrow\infty}=0$, para todo $n\in\mathbb{N}$.
+\end{itemize} 
+\begin{ex}
+	a série harmônica alternada $1-\frac{1}{2}+\frac{1}{3}-\frac{1}{4}+...=\sum_{n=1}^{\infty}(-1)^{n+1}\frac{1}{n}$ é convergente ?
+	
+	Solução.
+\end{ex}
+\vspace*{5cm}
+\begin{df}
+	Uma série $\sum_{n=1}^{\infty}a_{n}$ é dita absolutamente convergente se a série de valores absolutos $\sum_{n=1}^{\infty}|a_{n}|$ for convergente.
+\end{df}
+\begin{df}
+	A série $\sum_{n=1}^{\infty}a_{n}$ é dita condicionalmente convergente se ela for convergente, mas não absolutamente convergente.
+\end{df}
+\begin{ex}
+	Teste a série $\sum_{n=1}^{\infty}(-1)^{n+1}\frac{n^{2}}{n^{3}+1}$ quanto a convergência ou divergência.
+	
+	Solução.
+\end{ex}
+\vspace*{5cm}
+\begin{ex}
+	A série $\sum_{n=1}^{\infty}(-1)^{n-1}\frac{1}{n^{2}}$ é absolutamente convergente por que?.
+	
+	Solução.
+\end{ex}
+
+\vspace*{5cm}
+\begin{ex}
+Determine se a série $\sum_{n=1}^{\infty}\frac{\cos (n)}{n^{2}}$ é convergente ou divergente?.
+	
+	Solução.
+\end{ex}
+\vspace*{5cm}
+\begin{ex}
+	A série alternada $\sum_{n=1}^{\infty}(-1)^{n}\frac{3}{2^{n}}$ é absolutamente convergente ja que a série
+\end{ex}
+\vspace*{5cm}
+\begin{teo} 
+	Se uma série é absolutamente convergente, então ela é convergente.
+\end{teo}
+\subsubsection{Teste da razão} 
+\begin{itemize}
+	\item[i.]Se $\lim\limits_{n\rightarrow\infty} \left| \frac{a_{n+1}}{a_{n}}\right|=L<1$, então a série $\sum_{n=1}^{\infty}a_{n}$ é absolutamente convergente.
+	\item[ii.]Se $\lim\limits_{n\rightarrow\infty} \left| \frac{a_{n+1}}{a_{n}}\right|=L>1$ ou $\lim\limits_{n\rightarrow\infty} \left| \frac{a_{n+1}}{a_{n}}\right|=\infty$, então a série $\sum_{n=1}^{\infty}a_{n}$ é divergente.
+	\item[iii.]Se $\lim\limits_{n\rightarrow\infty} \left| \frac{a_{n+1}}{a_{n}}\right|=1$ o teste da razão não é conclusivo. Isto é, nenhuma conclusão pode ser tirada sobre a convergência ou divergência de $\sum_{n=1}^{\infty}a_{n}$. 
+\end{itemize} 
+\begin{ex}
+	Teste a série $\sum_{n=1}^{\infty}(-1)^{n}\frac{n^{3}}{3^{n}}$ quanto a convergência absoluta. 
+\end{ex}
+\vspace*{5cm}
+\begin{ex}
+	Teste a convergência ou divergência da série $\sum_{n=1}^{\infty}\frac{n^{n}}{n!}$. 
+\end{ex}
+\vspace*{5cm}
+\subsubsection{Teste da raiz} 
+\begin{itemize}
+	\item[i.]Se $\lim\limits_{n\rightarrow\infty} \sqrt[n]{\left|a_{n} \right| }=L<1$, então a série $\sum_{n=1}^{\infty}a_{n}$ é absolutamente convergente.
+	\item[ii.]Se $\lim\limits_{n\rightarrow\infty} \sqrt[n]{\left|a_{n} \right| }=L>1$ ou $\lim\limits_{n\rightarrow\infty} \sqrt[n]{\left|a_{n} \right| }=\infty$, então a série $\sum_{n=1}^{\infty}a_{n}$ é divergente.
+	\item[iii.]Se $\lim\limits_{n\rightarrow\infty} \sqrt[n]{\left|a_{n} \right| }=1$ o teste da razão não é conclusivo. Isto é, nenhuma conclusão pode ser tirada sobre a convergência ou divergência de $\sum_{n=1}^{\infty}a_{n}$. 
+\end{itemize}
+\begin{ex}
+	Teste a convergência da série $\sum_{n=1}^{\infty}(\frac{2n+3}{3n+2})^{n}$ quanto a convergência absoluta. 
+\end{ex}
+
+
+
+
+
+
+
+
+\end{document}

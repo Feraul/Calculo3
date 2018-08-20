@@ -1,0 +1,126 @@
+\documentclass[oneside,a4paper,12pt]{article}
+\usepackage[english,brazilian]{babel}
+\usepackage[alf]{abntex2cite}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+\usepackage{lastpage}			  % Usado pela Ficha catalográfica
+\usepackage{indentfirst}		  % Indenta o primeiro parágrafo de cada
+\usepackage[top=20mm, bottom=20mm, left=20mm, right=20mm]{geometry}
+\usepackage{framed}
+\usepackage{booktabs}
+
+\usepackage{float}
+\usepackage{color}				  % Controle das cores
+\usepackage{graphicx}			  % Inclusão de gráficos
+\usepackage{microtype} 		      % para melhorias de justificação
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage[table]{xcolor}
+\usepackage{subfig}
+\usepackage{epstopdf}
+\usepackage{hyperref}
+
+\usepackage[mathcal]{eucal}
+\usepackage{amsmath}               % great math stuff
+\usepackage{amsfonts}              % for blackboard bold, etc
+\usepackage{amsthm}                % better theorem environments
+\usepackage{amssymb}
+\usepackage{mathrsfs}
+\DeclareMathAlphabet{\mathpzc}{OT1}{pzc}{m}{it}
+\usepackage{undertilde}            % botar tilde embaixo da letra
+\usepackage{mathptmx}          % fonte
+\usepackage{graphicx}
+\graphicspath{{./Figuras/}}    
+\definecolor{shadecolor}{rgb}{0.8,0.8,0.8}
+
+
+%FAZ EDICOES AQUI (somente no conteudo que esta entre entre as ultimas  chaves de cada linha!!!)
+\newcommand{\universidade}{Universidade Federal de Pernambuco}
+\newcommand{\centro}{Centro Acadêmico do Agreste}
+\newcommand{\departamento}{Núcleo de Tecnologia}
+\newcommand{\curso}{Engenharia de Civil}
+\newcommand{\professor}{Fernando R. L. Contreras}
+\newcommand{\disciplina}{Cálculo Diferencial e Integral 3}
+%ATE AQUI !!!
+
+\begin{document}
+	\pagestyle{empty}
+	
+	\begin{center}
+	%\includegraphics[width=\linewidth/6]{logoUFPE.jpg}%LOGOTIPO DA INSTITUICAO
+	 	\vspace{0pt}
+	 	
+		\universidade
+		\par
+		\centro
+		\par
+		\departamento
+		\par
+		\curso
+		\par
+		\vspace{08pt}
+		\text{Segunda Chamada}\\ \text{ Prova 2 - Cálculo Diferencial e Integral 3}\\
+		\text{Prof. Fernando R. L. Contreras}	
+	\end{center}
+	
+	%\vspace{0.5pt}
+	
+	\begin{flushleft}
+		Aluno(a):
+	\end{flushleft}
+	
+\begin{itemize}
+\item[1.] Mediante o teorema de Green calcular a integral $\mathlarger{\oint}_{C} (2x^{3}-y^{3})dx+(x^{3}+y^{3})dy$ onde $C$ é o circunferência $x^{2}+y^{2}=1$ .
+\end{itemize}
+\begin{itemize}
+\item[2.] Seja $W$ a região sólida limitada pelos planos coordenados e o plano $2x+2y+z=6$ e seja $F(x,y,z)=(x,y^{2},z)$, calcular $\mathlarger{\iint}_{S}F\cdot dS$, onde $S$ é a superfície de $W$. \textit{Sug. utilize o teorema de divergência}. 
+ \end{itemize}
+ \begin{itemize}
+\item [3.] Calcule $\mathlarger{\iint}_{S} \nabla \times F\cdot dS$ onde $S=\{(x,y,z)\in R^{3}/ x=-1+y^{2}+z^{2}, x\leq 0 \}$ e o campo $F$ é definido por $F(x,y,z)=(xz,ze^{x},-y)$.
+\end{itemize}
+\begin{itemize}
+\item[4.] Determine a massa de um alambre em forma de hélice que percorre a curva $r(t)=(\cos(t),\sin(t),t)$, $0\leq t\leq2\pi$, se a densidade é $\rho(x,y,z)=z$. Além disso, calcule o momento de inercia com respeito ao eixo $Z$.
+\end{itemize}
+
+	\flushbottom
+	\flushright
+     Êxitos...!!!
+     \begin{center}
+     	%\includegraphics[width=\linewidth/6]{logoUFPE.jpg}%LOGOTIPO DA INSTITUICAO
+     	\vspace{0pt}
+     	
+     	\universidade
+     	\par
+     	\centro
+     	\par
+     	\departamento
+     	\par
+     	\curso
+     	\par
+     	\vspace{08pt}
+     	\text{Segunda Chamada }\\ \text{ Prova 1 - Cálculo Diferencial e Integral 3}\\
+     	\text{Prof. Fernando R. L. Contreras}	
+     \end{center}
+     
+     \begin{flushleft}
+     	Aluno(a):
+     \end{flushleft}
+ 
+ \begin{itemize}
+ 	\item[1.]  Encontre o raio de convergência e o intervalo de convergência da série $\mathlarger{\sum}_{n=0}^{\infty} \frac{n(x+2)^{n}}{3^{n+1}}$.
+ \end{itemize}
+ \begin{itemize}
+ 	\item[2.] Investigue a sequência ${a_{n}}$ definida pela relação de recorrência $a_{1}=2$ e $a_{n+1}=\frac{1}{2}(a_{n}+6)$ para $n=1,2,...$  . 
+ \end{itemize}
+ \begin{itemize}
+ 	\item [3.] Determine os valores máximo e minimo absolutos da função $f(x,y)=x^{2}-2xy+2y$ no retângulo $D=\{(x,y)| 0\leq x \leq 3, 0\leq y \leq 2\}$.
+ \end{itemize}
+ \begin{itemize}
+ 	\item[4.] Determine o valor máximo da função $f(x,y,z)=x+2y+3z$ na curva de interseção do plano $x-y+z=1$ com o cilindro $x^{2}+y^{2}=1$.
+ \end{itemize}
+\flushbottom
+\flushright
+Êxitos...!!!
+\end{document}
+
