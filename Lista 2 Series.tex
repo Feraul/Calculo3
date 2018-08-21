@@ -1,0 +1,177 @@
+\documentclass[oneside,a4paper,12pt]{article}
+\usepackage[english,brazilian]{babel}
+\usepackage[alf]{abntex2cite}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+\usepackage{lastpage}			  % Usado pela Ficha catalográfica
+\usepackage{indentfirst}		  % Indenta o primeiro parágrafo de cada
+\usepackage[top=5mm, bottom=5mm, left=10mm, right=10mm]{geometry}
+\usepackage{framed}
+\usepackage{booktabs}
+
+\usepackage{float}
+\usepackage{color}				  % Controle das cores
+\usepackage{graphicx}			  % Inclusão de gráficos
+\usepackage{microtype} 		      % para melhorias de justificação
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage[table]{xcolor}
+\usepackage{subfig}
+\usepackage{epstopdf}
+\usepackage{hyperref}
+
+\usepackage[mathcal]{eucal}
+\usepackage{amsmath}               % great math stuff
+\usepackage{amsfonts}              % for blackboard bold, etc
+\usepackage{amsthm}                % better theorem environments
+\usepackage{amssymb}
+\usepackage{mathrsfs}
+\DeclareMathAlphabet{\mathpzc}{OT1}{pzc}{m}{it}
+\usepackage{undertilde}            % botar tilde embaixo da letra
+\usepackage{mathptmx}          % fonte
+\usepackage{graphicx}
+\usepackage{multicol}
+\graphicspath{{./Figuras/}}    
+\definecolor{shadecolor}{rgb}{0.8,0.8,0.8}
+
+
+%%FAZ EDICOES AQUI (somente no conteudo que esta entre entre as ultimas  chaves de cada linha!!!)
+\newcommand{\universidade}{Universidade Federal de Pernambuco}
+\newcommand{\centro}{Centro Acadêmico do Agreste}
+\newcommand{\departamento}{Núcleo de Tecnologia}
+%\newcommand{\curso}{Engenharia de Produção}
+\newcommand{\professor}{Fernando R. L. Contreras}
+\newcommand{\disciplina}{Cálculo Diferencial e Integral 3}
+%%ATE AQUI !!!
+
+\begin{document}
+	\tiny
+	\pagestyle{empty}
+	
+	\begin{center}
+	%\includegraphics[width=\linewidth/6]{logoUFPE.jpg}%LOGOTIPO DA INSTITUICAO
+	 	\vspace{0pt}
+	 	
+		\universidade
+		\par
+		\centro
+		\par
+		\departamento
+%		\par
+%		\curso
+		\par
+		\vspace{08pt}
+		\text{Cálculo Diferencial e Integral 3}\\
+		\text{Prof. Fernando R. L. Contreras}\\
+			\text{Lista 2 - Séries}\\	
+	\end{center}
+	
+	%\vspace{0.5pt}
+	
+%	\begin{flushleft}
+%		Aluno(a):
+%	\end{flushleft}
+Nos problemas de 1 a 29, determine se a série infinita dada converge ou diverge. Se converge, determine sua soma
+
+\begin{multicols}{2}
+	
+\begin{itemize}
+\item[1.] $1+\frac{1}{3}+\frac{1}{9} +...+\frac{1}{3^{n}}+...$.
+\end{itemize}
+\begin{itemize}
+\item[2.] $1+e^{-1}+e^{-2}+ ...+e^{-n}+...$. 
+ \end{itemize}
+ \begin{itemize}
+\item [3.]$1+3+5+7+...+(2n-1)+...$.
+\end{itemize}
+\begin{itemize}
+\item[4.] $\frac{1}{2}+\frac{1}{\sqrt{2}}+\frac{1}{\sqrt[3]{2}}+...+\frac{1}{\sqrt[n]{2}}+...$.
+\end{itemize}
+\begin{itemize}
+\item[5.] $1-2+4-8+...+(-2)^{n}+...$.
+\end{itemize}
+\begin{itemize}
+	\item[6.] $1-\frac{1}{4}+\frac{1}{16}-...+(-\frac{1}{4})^{n}+...$.
+\end{itemize}
+\begin{itemize}
+	\item[7.] $4+\frac{4}{3}+\frac{4}{9}+\frac{4}{27}+...+\frac{4}{3^{n}}+...$.
+\end{itemize}
+\begin{itemize}
+	\item[8.] $\frac{1}{3}+\frac{2}{9}+\frac{4}{27}+...+\frac{2^{n-1}}{3^{n}}+...$.
+\end{itemize}
+\begin{itemize}
+	\item[9.] $1+(1.01)+(1.01)^{2}+(1.01)^{3}+...+(1.01)^{n}+...$.
+\end{itemize}
+\begin{itemize}
+	\item[10.] $1+\frac{1}{\sqrt{2}}+\frac{1}{\sqrt[3]{3}}+...+\frac{1}{\sqrt[n]{n}}+...$.
+\end{itemize}
+\begin{itemize}
+	\item[11.] $\sum_{n=0}^{\infty}\frac{(-1)^{n}n}{n+1}$.
+\end{itemize}
+\begin{itemize}
+	\item [12.] $\sum_{n=1}^{\infty}(\frac{e}{10})^{n}$
+\end{itemize}
+\begin{itemize}
+	\item [13.] $\sum_{n=0}^{\infty}(-1)^{n}(\frac{3}{e})^{n}$
+\end{itemize}
+\begin{itemize}
+	\item [14.] $\sum_{n=0}^{\infty}\frac{3^{n}-2^{n}}{4^{n}}$
+\end{itemize}
+\begin{itemize}
+	\item [15.] $\sum_{n=1}^{\infty}(\sqrt{2})^{1-n}$
+\end{itemize}
+\begin{itemize}
+	\item [16.] $\sum_{n=1}^{\infty}(\frac{1}{2}-\frac{1}{2^{n}})$
+\end{itemize}
+\begin{itemize}
+	\item [17.] $\sum_{n=1}^{\infty}\frac{n}{10n+17}$
+\end{itemize}
+\begin{itemize}	
+	\item [18.] $\sum_{n=1}^{\infty}\frac{\sqrt{n}}{\ln (n+1)}$
+\end{itemize}
+\begin{itemize}
+	\item [19.] $\sum_{n=1}^{\infty}(5^{-n}-7^{-n})$
+\end{itemize}
+\begin{itemize}
+	\item [20.] $\sum_{n=1}^{\infty}(\frac{e}{\pi})^{n}$
+\end{itemize}
+\begin{itemize}
+	\item [21.] $\sum_{n=1}^{\infty}(\frac{\pi}{e})^{n} $
+\end{itemize}
+\begin{itemize}
+	\item [22.] $\sum_{n=0}^{\infty}(\frac{100}{99})^{n}$
+\end{itemize}
+\begin{itemize}
+	\item [23.] $\sum_{n=0}^{\infty}(\frac{99}{100})^{n}$
+\end{itemize}	
+\begin{itemize}
+	\item [24.] $\sum_{n=0}^{\infty}\frac{1+2^{n}+3^{n}}{5^{n}}$
+\end{itemize}
+\begin{itemize}
+	\item [25.] $\sum_{n=0}^{\infty} \frac{1+2^{n}+5^{n}}{3^{n}}$
+\end{itemize}
+\begin{itemize}
+	\item [26.] $\sum_{n=0}^{\infty}\frac{7\times 5^{n}+3\times11^{n}}{13^{n}}$
+\end{itemize}
+\begin{itemize}
+	\item [27.] $\sum_{n=1}^{\infty}\sqrt[n]{2}$
+\end{itemize}
+\begin{itemize}
+	\item [28.] $\sum_{n=1}^{\infty} \left[ (\frac{7}{11})^{n}-(\frac{3}{5})^{n}\right] $
+\end{itemize}
+\begin{itemize}
+	\item [29.] $\sum_{n=0}^{\infty}\frac{1}{1+(\frac{1}{10})^{n}}$
+\end{itemize}
+\begin{itemize}
+	\item [25.] Mostre que: se $\sum a_{n}$ diverge e $c$ é uma constante distinto de zero, então $\sum ca_{n}$ diverge.
+\end{itemize}
+\begin{itemize}
+	\item [26.] Suponha que $\sum a_{n}$ converge e que $\sum b_{n}$. Mostre que $\sum (a_{n}+b_{n})$ diverge.
+\end{itemize}
+\begin{itemize}
+	\item [27.] Sejam $S_{n}$ e $T_{n}$ a n-ésima soma parcial de $\sum a_{n}$ e $\sum b_{n}$ respectivamente. Suponha que $a_{n}=b_{n}$ para todo $n>k$. Mostre que $S_{n}-T_{n}=S_{k}-T_{k}$ se $n>k$. 
+\end{itemize}
+\end{multicols}    
+\end{document}
+

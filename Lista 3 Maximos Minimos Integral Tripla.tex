@@ -1,0 +1,254 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%    Option test file, will be created during the first LaTeX run:
+\begin{filecontents}{exercise.thm}
+\def\th@exercise{%
+  \normalfont % body font
+  \thm@headpunct{:}%
+}
+\end{filecontents}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[12pt,openright,oneside,a4paper,english,french,spanish,brazil]{article}
+% ---
+% Pacotes básicos 
+% ---
+\usepackage{lmodern}			  % Usa a fonte Latin Modern			
+\usepackage[T1]{fontenc}		  % Selecao de codigos de fonte.
+\usepackage[utf8]{inputenc}	      % Codificacao do documento (conversão automática dos acentos)
+\usepackage[top=20mm, bottom=20mm, left=20mm, right=20mm]{geometry}
+\usepackage{lastpage}			  % Usado pela Ficha catalográfica
+\usepackage{indentfirst}		  % Indenta o primeiro parágrafo de cada seção.
+\usepackage{color}				  % Controle das cores
+\usepackage{graphicx}			  % Inclusão de gráficos
+\usepackage{microtype} 		      % para melhorias de justificação
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage[table]{xcolor}
+\usepackage{subfig}
+\usepackage{epstopdf}
+\usepackage{hyperref}
+\usepackage[mathcal]{eucal}
+\usepackage{amsmath}               % great math stuff
+\usepackage{amsfonts}              % for blackboard bold, etc
+\usepackage{amsthm}                % better theorem environments
+\usepackage{amssymb}
+\usepackage{mathrsfs}
+\DeclareMathAlphabet{\mathpzc}{OT1}{pzc}{m}{it}
+\usepackage{undertilde}            % botar tilde embaixo da letra
+\usepackage{mathptmx}          % fonte
+\usepackage{latexsym}
+\usepackage{makeidx}            % para definir o índice
+\usepackage{epsfig}             % para introduzir figuras no formato eps
+\usepackage{bbm}
+\usepackage{dsfont}
+\usepackage{graphicx,color}     % permite a inclusao de figuras
+\usepackage{verbatim}
+\usepackage{gensymb}
+\usepackage{titling}
+\newcommand{\subtitle}[1]{%
+	\posttitle{%
+		\par\end{center}
+	\begin{center}\Large#1\end{center}
+	\vskip0.5em}%
+}
+
+
+
+\newtheorem{df}{Definição}
+\newtheorem{ex}{Exemplo}
+\newtheorem{teo}{Teorema}
+
+\newtheoremstyle{note}% name
+  {3pt}%      Space above
+  {3pt}%      Space below
+  {}%         Body font
+  {}%         Indent amount (empty = no indent, \parindent = para indent)
+  {\itshape}% Thm head font
+  {:}%        Punctuation after thm head
+  {.5em}%     Space after thm head: " " = normal interword space;
+        %       \newline = linebreak
+  {}%         Thm head spec (can be left empty, meaning `normal')
+
+\theoremstyle{note}
+\newtheorem{note}{Note}
+
+\newtheoremstyle{citing}% name
+  {3pt}%      Space above, empty = `usual value'
+  {3pt}%      Space below
+  {\itshape}% Body font
+  {}%         Indent amount (empty = no indent, \parindent = para indent)
+  {\bfseries}% Thm head font
+  {.}%        Punctuation after thm head
+  {.5em}%     Space after thm head: " " = normal interword space;
+        %       \newline = linebreak
+  {\thmnote{#3}}% Thm head spec
+
+\theoremstyle{citing}
+\newtheorem*{varthm}{}% all text supplied in the note
+
+\newtheoremstyle{break}% name
+  {9pt}%      Space above, empty = `usual value'
+  {9pt}%      Space below
+  {\itshape}% Body font
+  {}%         Indent amount (empty = no indent, \parindent = para indent)
+  {\bfseries}% Thm head font
+  {.}%        Punctuation after thm head
+  {\newline}% Space after thm head: \newline = linebreak
+  {}%         Thm head spec
+
+\theoremstyle{break}
+\newtheorem{bthm}{B-Theorem}
+
+\theoremstyle{exercise}
+\newtheorem{exer}{Exercise}
+
+\swapnumbers
+\theoremstyle{plain}
+\newtheorem{thmsw}{Theorem}[section]
+%\newtheorem{corsw}[thm]{Corollary}
+\newtheorem{propsw}{Proposition}
+%\newtheorem{lemsw}[thm]{Lemma}
+
+%    Because the amsmath pkg is not used, we need to define a couple of
+%    commands in more primitive terms.
+\let\lvert=|\let\rvert=|
+\newcommand{\Ric}{\mathop{\mathrm{Ric}}\nolimits}
+
+%    Dispel annoying problem of slightly overlong lines:
+\addtolength{\textwidth}{8pt}
+
+\title{ \textbf{Notas de Aula}}
+
+\author{\textbf{Fernando Contreras}\\
+	\large Nucleo de Tecnologia\\
+	Universidade Federal de Pernambuco (UFPE)}
+
+
+
+\begin{document}
+	\begin{center}
+		Universidade Federal de Pernambuco (UFPE)\\
+		Centro Acadêmico do Agreste\\
+		Núcleo de Tecnologia\\
+		
+		Lista 3 de Calculo Diferencial e Integral 3\\
+		Prof. Fernando RL Contreras
+	\end{center}
+
+
+Sejam os seguintes problemas relativos a Maximos, Minimos e Integrais triplas.
+
+%\begin{multicols}{2}
+
+\begin{itemize}
+	\item[1.] Determine os valoress máximos e mínimos locais e pontos de sela da função. 
+	\begin{itemize}
+	\item[a.] $f(x,y)=xy+\frac{1}{x}+\frac{1}{y}$
+	problema 12 pag. 885, stewart	
+	\item[b.] $f(x,y)=(x^{2}+y^{2})e^{y^{2}-x^{2}}$
+	problema 15 pag. 885, stewart	
+    \item[c.] $f(x,y)=\sin (x) \sin(y)$, $-\pi<x<\pi$, $-\pi<y<\pi$
+	problema 18 pag. 885, stewart
+    \end{itemize}	
+\end{itemize}
+\begin{itemize}
+	\item[2.] Determine os valores máximo e mínimo absoluto de $f$ no conjunto $D$.   
+	\begin{itemize}
+		\item[a.] $f(x,y)=1+4x-5y$, D é região triangular fechada com vértices $(0,0), (2,0)$ e $(0.3)$
+		problema 29 pag. 885, stewart	
+		\item[b.] $f(x,y)=x^{2}+y^{2}+x^{2}y+4$, $D=\{(x,y)| \quad |x|\leqslant 1, |y|\leqslant 1 \}$
+		problema 31 pag. 885, stewart
+		\item[c.] $f(x,y)=xy^{2}$, $D=\{(x,y)| \quad 0\leqslant x, 0\leqslant y, x^{2}+y^{2}\leqslant3 \}$
+		problema 34 pag. 885, stewart		
+	\end{itemize}
+\end{itemize}
+\begin{itemize}
+	\item[3.] Utilize os multiplicadores de Lagrange para determinar os valores maximos e mínimos da função sujeita à(s) restrição(ões) dada(s).
+	\begin{itemize}
+	\item[a.] $f(x,y)=x^{2}+y^{2}$; $xy=1$
+	problema 3 pag. 893, stewart	
+	\item[b.] $f(x,y,z,t)=x+y+z+t$; $x^{2}+y^{2}+z^{2}+t^{2}=1$
+	problema 13 pag. 893, stewart	
+	\item[c.] $f(x,y,z)=x+2y$; $x+y+z=1$ e $y^{2}+z^{2}=4$
+	problema 15 pag. 893, stewart	
+	\item[d.] $f(x,y,z)=yz+xy$; $xy=1$ e $y^{2}+z^{2}=1$
+	problema 17 pag. 893, stewart
+    \end{itemize}
+\end{itemize}
+\begin{itemize}
+	\item[4.] Determine os valores extremos de $f$ na região descrita pela desigualdade.
+	\begin{itemize}
+		\item[a.] $f(x,y)=2x^{2}+3y^{2}-4x-5$; $x^{2}+y^{2}\leqslant 16$
+		problema 18 pag. 894, stewart	
+		\item[b.] $f(x,y)=e^{-xy}$; $x^{2}+4y^{2}\leqslant 1$
+     	problema 19 pag. 894, stewart		
+	\end{itemize}
+\end{itemize}
+
+\begin{itemize}
+	\item[5.] Uma caixa retangular sem tampa deverá ter um volume fixo. Como deverá ser feito a caixa para empregar em sua fabricação a menor quantidade de material?
+	problema 12 pag. 515, Eduardo Espinosa	
+\end{itemize}
+\begin{itemize}
+	\item[6.] Suponha que $T(x,y)=4-x^{2}-y^{2}$ represente uma distribuição de temperatura no plano. Seja $A=\{(x,y)\in \mathbbm{R}^{2} | x\geqslant 0, y\geqslant x, 2y+x \leqslant 4\} $. Determine o ponto de A de menor temperatura 
+		problema 3 pag.322, Gudorizzi vol 2	
+\end{itemize}
+\begin{itemize}
+	\item[7.] A temperatura $T$ em qualquer ponto $(x,y,z)$ do espaço é dada por $T=100x^{2}yz$. Determine a temperatura máxima sobre a esfera $x^{2}+y^{2}+z^{2}\leqslant 4$. Qual a temperatura mínima?
+		problema 23 pag.333, Gudorizzi vol 2 
+\end{itemize}
+\begin{itemize}
+	\item[8.] Avalie a integral de $f(x,y,z)=3z+xz$, sobre o sólido $E$ limitado pelo cilindro $x^{2}+z^{2}=9$ e pelos planos $x+y=3, z=0, y=0$ sobre o plano $XY$. Rpta: $\frac{648}{5}$
+	 problema 3.4 pag. 192 Venero
+\end{itemize}
+\begin{itemize}
+	\item[9.]Seja $E$ o sólido interior ao cilindro $y^{2}+z^{2}=4$, limitado pelas superficies cilindricas $x=z^{2}$, $x-6=(z-2)^{2}$. Calcule o volume de $E$. Rpta: $40 \pi$
+	 problema 3.8 pag. 194 Venero
+\end{itemize}
+\begin{itemize}
+	\item[10.] Calcule a integral tripla de $f(x,y,z)=\sqrt{4-z}$ sobre o sólido $E$ limitado pelos cilindros $y^{2}=2x$, $y^{2}=8-2x$, $y^{2}=4-z$.Rpta: $\frac{448}{9}$
+	 problema 3.11 pag. 197 Venero
+\end{itemize}
+\begin{itemize}
+	\item [11.] Ache o volume de um porção $E$ da esfera $x^{2}+y^{2}+z^{2}\leqslant a^{2}$, $a>0$ que esta no interior do cilindro $r=a\sin \theta$. Rpta: $\frac{4a^{3}}{3}(\frac{\pi}{2}-\frac{2}{3})$
+		 problema 5.2 pag. 208 Venero
+\end{itemize}
+\begin{itemize}
+	\item [12.] Calcule a integral da função $f(x,y,z)=\sqrt{9-x^{2}-2y^{2}}$ sobre o sólido $S$limitado superiormente pelo paraboloide $z=9-x^{2}-2y^{2}$ e inferiormente pelo plano $z=5$. Rpta: $5\sqrt{10}/3 +9\sqrt{2}/5$
+	 problema 5.12 pag. 215 Venero 
+\end{itemize}
+\begin{itemize}
+	\item [13.] Ache o volume do sólido $S$ exterior a: $y^{2}=x^{2}+z^{2}$ e interior a  esfera $x^{2}+y^{2}+z^{2}=2ax$, $a>0$. Rpta:  $\frac{2a^{3}}{9}(3\pi +8)$ 
+	 problema 6.9 pag. 234 Venero 
+\end{itemize}
+\begin{itemize}
+	\item [14.]  Encontrar a massa do sólido esférico de radio "a" se a densidade de volume em qualquer ponto é proporcional a distancia do ponto ao centro da esfera. Rpta: $\pi ka^{3}$, $k$ constante de proporcionalidade. 
+	 problema 12 pag. 734 Eduardo Espinoza
+\end{itemize}
+\begin{itemize}
+	\item [15.] Encontrar o momento de inercia com respeito ao eixo $Z$ do sólido homogêneo dentro do paraboloide $x^{2}+y^{2}=z$ e fora do cone $x^{2}+y^{2}=z^{2}$, $p$ é a densidade de volume constante $k$.   Rpta: $\frac{k\pi}{15}$
+	 problema 13 pag. 734 Eduardo Espinoza
+\end{itemize}
+\begin{itemize}
+	\item [16.] Calcule o centro de massa do corpo homogêneo $x^{2}+y^{2}\leqslant z \leqslant 1$. Rpta: $(0,0,\frac{2}{3})$
+	 problema 2 pag. 138 Guidorizzi vol 3 
+\end{itemize}
+\begin{itemize}
+	\item [17.] Calcule momento de inercia de uma esfera homogênea, de raio $R$, em relação ao eixo passando pelo seu centro. Rpta: $\frac{2}{3}MR^{2}$, onde $M=\frac{4}{3}\pi R^{3}k$ é massa da esfera e $k$ é a densidade constante.
+	 problema 1 pag. 137 Guidorizzi vol 3 
+\end{itemize}
+
+\begin{itemize}
+	\item [18.] Calcule  $\iiint\limits_B\frac{\sin (x+y-z)}{x+2y+z}dxdydz$ onde $B$ é o paralelepípedo $1\leqslant x+2y+z\leqslant 2$, $0\leqslant x+y-z\leqslant \frac{\pi}{4}$ e $0\leqslant z \leqslant 1$.Rpta: $\ln(2)(1-\frac{\sqrt{2}}{2})$
+	 problema 1 pag. 117 Guidorizzi vol 3 
+\end{itemize}
+\begin{itemize}
+	\item [19.] Calcule o volume do conjunto de todos $(x,y,z)$ tais que $1\leqslant x+y+z\leqslant 3$, $x+y\leqslant z \leqslant x+y+2$, $x\geqslant 0 $ e $y\geqslant 0$. Rpta: $\frac{24}{25}$
+	 problema 6 pag. 121 Guidorizzi vol 3 
+\end{itemize}
+\begin{itemize}
+\item [20.] Calcule a massa do cilindro $x^{2}+y^{2}\leqslant 1$, $0\leqslant z \leqslant 1$ admitindo que a densidade seja dada por $x^{2}$. Rpta: $\frac{\pi}{4} $ 
+ problema 3 pag. 110 Guidorizzi vol 3 
+\end{itemize}
+\end{document}

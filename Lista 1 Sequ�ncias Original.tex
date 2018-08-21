@@ -1,0 +1,316 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%    Option test file, will be created during the first LaTeX run:
+\begin{filecontents}{exercise.thm}
+\def\th@exercise{%
+  \normalfont % body font
+  \thm@headpunct{:}%
+}
+\end{filecontents}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[12pt,openright,oneside,a4paper,english,french,spanish,brazil]{article}
+% ---
+% Pacotes básicos 
+% ---
+\usepackage{lmodern}			  % Usa a fonte Latin Modern			
+\usepackage[T1]{fontenc}		  % Selecao de codigos de fonte.
+\usepackage[utf8]{inputenc}	      % Codificacao do documento (conversão automática dos acentos)
+\usepackage[top=20mm, bottom=20mm, left=20mm, right=20mm]{geometry}
+\usepackage{lastpage}			  % Usado pela Ficha catalográfica
+\usepackage{indentfirst}		  % Indenta o primeiro parágrafo de cada seção.
+\usepackage{color}				  % Controle das cores
+\usepackage{graphicx}			  % Inclusão de gráficos
+\usepackage{microtype} 		      % para melhorias de justificação
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage[table]{xcolor}
+\usepackage{subfig}
+\usepackage{epstopdf}
+\usepackage{hyperref}
+\usepackage[mathcal]{eucal}
+\usepackage{amsmath}               % great math stuff
+\usepackage{amsfonts}              % for blackboard bold, etc
+\usepackage{amsthm}                % better theorem environments
+\usepackage{amssymb}
+\usepackage{mathrsfs}
+\DeclareMathAlphabet{\mathpzc}{OT1}{pzc}{m}{it}
+\usepackage{undertilde}            % botar tilde embaixo da letra
+\usepackage{mathptmx}          % fonte
+\usepackage{latexsym}
+\usepackage{makeidx}            % para definir o índice
+\usepackage{epsfig}             % para introduzir figuras no formato eps
+\usepackage{graphicx,color}     % permite a inclusao de figuras
+\usepackage{verbatim}
+\usepackage{gensymb}
+\usepackage{titling}
+\newcommand{\subtitle}[1]{%
+	\posttitle{%
+		\par\end{center}
+	\begin{center}\Large#1\end{center}
+	\vskip0.5em}%
+}
+
+
+
+\newtheorem{df}{Definição}
+\newtheorem{ex}{Exemplo}
+\newtheorem{teo}{Teorema}
+
+\newtheoremstyle{note}% name
+  {3pt}%      Space above
+  {3pt}%      Space below
+  {}%         Body font
+  {}%         Indent amount (empty = no indent, \parindent = para indent)
+  {\itshape}% Thm head font
+  {:}%        Punctuation after thm head
+  {.5em}%     Space after thm head: " " = normal interword space;
+        %       \newline = linebreak
+  {}%         Thm head spec (can be left empty, meaning `normal')
+
+\theoremstyle{note}
+\newtheorem{note}{Note}
+
+\newtheoremstyle{citing}% name
+  {3pt}%      Space above, empty = `usual value'
+  {3pt}%      Space below
+  {\itshape}% Body font
+  {}%         Indent amount (empty = no indent, \parindent = para indent)
+  {\bfseries}% Thm head font
+  {.}%        Punctuation after thm head
+  {.5em}%     Space after thm head: " " = normal interword space;
+        %       \newline = linebreak
+  {\thmnote{#3}}% Thm head spec
+
+\theoremstyle{citing}
+\newtheorem*{varthm}{}% all text supplied in the note
+
+\newtheoremstyle{break}% name
+  {9pt}%      Space above, empty = `usual value'
+  {9pt}%      Space below
+  {\itshape}% Body font
+  {}%         Indent amount (empty = no indent, \parindent = para indent)
+  {\bfseries}% Thm head font
+  {.}%        Punctuation after thm head
+  {\newline}% Space after thm head: \newline = linebreak
+  {}%         Thm head spec
+
+\theoremstyle{break}
+\newtheorem{bthm}{B-Theorem}
+
+\theoremstyle{exercise}
+\newtheorem{exer}{Exercise}
+
+\swapnumbers
+\theoremstyle{plain}
+\newtheorem{thmsw}{Theorem}[section]
+%\newtheorem{corsw}[thm]{Corollary}
+\newtheorem{propsw}{Proposition}
+%\newtheorem{lemsw}[thm]{Lemma}
+
+%    Because the amsmath pkg is not used, we need to define a couple of
+%    commands in more primitive terms.
+\let\lvert=|\let\rvert=|
+\newcommand{\Ric}{\mathop{\mathrm{Ric}}\nolimits}
+
+%    Dispel annoying problem of slightly overlong lines:
+\addtolength{\textwidth}{8pt}
+
+\title{ \textbf{Notas de Aula}}
+
+\author{\textbf{Fernando Contreras}\\
+	\large Nucleo de Tecnologia\\
+	Universidade Federal de Pernambuco (UFPE)}
+
+
+
+\begin{document}
+	\begin{center}
+		Universidade Federal de Pernambuco (UFPE)\\
+		Centro Acadêmico do Agreste\\
+		Núcleo de Tecnologia\\
+		
+		Lista 1 de Calculo Diferencial e Integral 3\\
+		Prof. Fernando RL Contreras
+	\end{center}
+
+
+Sejam os seguintes problemas
+
+%\begin{multicols}{2}
+
+\begin{itemize}
+	\item[1.] Determine $\lim\limits_{n\rightarrow \infty} (\frac{1}{n})^{1/\ln n} $ \quad \quad Rpta. $e^{-1}$
+\end{itemize}
+\begin{itemize}
+	\item[2.] Calcule $\lim\limits_{n\rightarrow \infty} \frac{(-1)^{n}n^{3}}{n^{3}+2n^{2}+1}$ \quad \quad Rpta. Diverge
+\end{itemize}
+\begin{itemize}
+	\item [3.] Determine $\lim\limits_{n\rightarrow \infty} \frac{1}{\sqrt{n^{2}-1}-\sqrt{n^{2}+n}}$ \quad \quad Rpta. -2
+\end{itemize}
+\begin{itemize}
+	\item[4.] Calcule $\lim\limits_{n\rightarrow \infty} \frac{1.3.5...(2n-1)}{(2n)^{n}}$ \quad \quad Rpta. 0
+\end{itemize}
+\begin{itemize}
+	\item[5.] Determinar $\lim\limits_{n\rightarrow } \sinh (\ln (n))$ \quad \quad Rpta. Diverge
+\end{itemize}
+%\end{multicols}
+Nos seguintes problemas determine se a sequência converge ou não e encontre o limite se ele converge. 
+%\begin{multicols}{2}
+
+\begin{itemize}
+	\item[1.] $a_{n}=\frac{1.2.3....(2n-1)}{n!}$ \quad \quad Rpta. Diverge
+\end{itemize}
+\begin{itemize}
+	\item[2.] $a_{n}=1-(0.2)^{n}$ \quad \quad Rpta. Converge a 1
+\end{itemize}
+\begin{itemize}
+	\item[3.]  $a_{n}=\frac{3+5n^{2}}{n+n^{2}}$ \quad \quad Rpta. Converge a 0
+\end{itemize}
+\begin{itemize}
+	\item[4.] Calcule o limite da sequência $\left(  \sqrt{2},\sqrt{2\sqrt{2}},\sqrt{2\sqrt{2\sqrt{2}}}, ...\right)  $ \quad \quad Rpta.2
+\end{itemize}
+\begin{itemize}
+	\item[5.]$a_{n}=\frac{n^{2}}{2n-1}\sin (\frac{1}{n})$ \quad \quad Rpta. Converge a 1/2
+\end{itemize}
+\begin{itemize}
+	\item[6.] $\left(  \arctan(2n)\right)  $ \quad \quad Rpta. Converge a $\frac{\pi}{2}$
+\end{itemize}
+\begin{itemize}
+	\item [7.] $\left(  \frac{\ln(n)}{\ln(2n)}\right) $ \quad \quad Rpta. Converge a 1
+\end{itemize}
+\begin{itemize}
+	\item [8.] $\left(  n^{2}e^{-n}\right) $ \quad \quad Rpta. Converge a 0
+\end{itemize}
+\begin{itemize}
+	\item [9.] $a_{n}=\frac{(-3)^{n}}{n!}$ \quad \quad Rpta. Converge a 0
+\end{itemize}
+\begin{itemize}
+	\item [10.] $a_{n}=\frac{(\ln n)^{2}}{n}$ \quad \quad Rpta. Converge a 0
+\end{itemize}
+\begin{itemize}
+	\item [11.] $a_{n}=\sqrt{\frac{n+1}{9n+1}}$ \quad\quad Rpta. Converge a 1/3
+\end{itemize}
+\begin{itemize}
+	\item [12.] $a_{n}=\frac{1}{n}\int_{1}^{n}\frac{1}{x}dx$ \quad\quad Rpta. Converge a 0
+\end{itemize}
+\begin{itemize}
+	\item [13.]$a_{n}=\frac{(\ln n)^{200}}{n}$ \quad\quad Rpta. Converge a 0
+\end{itemize}
+\begin{itemize}
+	\item [14.] $a_{n}=\frac{n!}{n^{n}}$ (Sugestão compare com $1/n$). \quad\quad Rpta. Converge a 0
+\end{itemize}
+\begin{itemize}
+	\item [15.] $a_{n}=(\frac{x^{n}}{2n+1})^{1/n}$, se $x>0$ \quad\quad Rpta. Converge a 0
+\end{itemize}
+\begin{itemize}
+	\item [16.] $a_{n}=\frac{(-1)^{n+1}}{2n-1}$ \quad\quad  Rpta. Converge a 0
+\end{itemize}
+\begin{itemize}
+	\item [17.] $a_{n}=(3^{n}+5^{n})^{1/n}$  \quad\quad  Rpta. Converge a 5
+\end{itemize}
+%\end{multicols} 
+Assuma que cada sequência convirja e encontre o limite.
+%\begin{multicols}{2}
+\begin{itemize}
+	\item [17.] $a_{1}=2$, $a_{n+1}= \frac{72}{1+a_{n}}$ \quad\quad  Rpta. 8
+\end{itemize}
+\begin{itemize}
+	\item [18.] $a_{1}=-1$, $a_{n+1}= \frac{a_{n}+6}{a_{n}+2}$ \quad\quad  Rpta. 2
+\end{itemize}	
+\begin{itemize}
+	\item [19.] $a_{1}=-4$, $a_{n+1}= \sqrt{8+2a_{n}}$ \quad\quad  Rpta. 4
+\end{itemize}
+\begin{itemize}
+	\item [20.] $a_{1}=0$, $a_{n+1}= \sqrt{8+2a_{n}}$ \quad\quad  Rpta. 4
+\end{itemize}
+\begin{itemize}
+	\item [21.] $a_{1}=5$, $a_{n+1}= \sqrt{5a_{n}}$ \quad\quad  Rpta. 5
+\end{itemize}
+\begin{itemize}
+	\item [22.] $a_{1}=3$, $a_{n+1}= 12-\sqrt{a_{n}}$ \quad\quad  Rpta. 9
+\end{itemize}
+\begin{itemize}
+	\item [23.] $2,2+\frac{1}{2}, 2+\frac{1}{2+\frac{1}{2}}, 2+\frac{1}{2+\frac{1}{2+\frac{1}{2}}},...$ \quad\quad  Rpta. $1+\sqrt{2}$
+\end{itemize}
+\begin{itemize}
+	\item [24.] $\sqrt{1}, \sqrt{1+\sqrt{1}}, \sqrt{1+\sqrt{1+\sqrt{1}}}, \sqrt{1+\sqrt{1+\sqrt{1}+\sqrt{1}}}, ...$ \quad\quad  Rpta. $\frac{1+\sqrt{5}}{2}$
+\end{itemize}
+\begin{itemize}
+	\item [25.] Método de Newton. As sequências vêm da formula recursiva para o método de Newton, $x_{n+1}=x_{n}-\frac{f(x_{n})}{f'(x_{n})}$. A sequência converge? Em caso afirmativo, para qual valor? Identifique a função $f$ que gera a sequência $x_{0}=1, x_{n+1}=x_{n}-\frac{x_{n}^{2}-2}{2x_{n}}=\frac{x_{n}}{2}+\frac{1}{x_{n}}$  \quad\quad  Rpta. $\sqrt{2}$ 
+\end{itemize}
+\begin{itemize}
+	\item [26.] O primeiro termo de uma sequência é $x_{1}=1$. Cada um dos termos seguintes é a soma de todos os seus antecedentes: $x_{n+1}=x_{1}+x_{2}+...+x_{n}$. Escreva os primeiros termos da sequência suficientes para deduzir uma fórmula geral para $x$, que seja verdadeira para $n\geq2$ 
+\end{itemize}
+\begin{itemize}
+	\item [27.]\textbf{(a)} Presumindo que $\lim\limits_{n\rightarrow \infty}(\frac{1}{n^{c}})=0$ se $c$ for qualquer constante
+	positiva, mostre que $\lim\limits_{n\rightarrow \infty}(\frac{\ln (n)}{n^{c}})=0$ se $c$ for qualquer constante positiva.\\
+	\textbf{ (b)} Prove que $\lim\limits_{n\rightarrow \infty}(\frac{1}{n^{c}})=0$ se $c$ for qualquer constante positiva. (Sugestão: se $\epsilon =0.001$ e $c=0.04$, quão grande deve ser $N$ para assegurar que $\left| 1/n^{c} -0 \right| < \epsilon$ e $n>N$ ? ) 
+\end{itemize}
+%\end{multicols} 
+%\begin{multicols}{2}
+Determine se a sequência é monotônica e
+se é limitada.
+\begin{itemize}
+	\item [28.] $a_{n}=\frac{3n+1}{n+1}$
+\end{itemize}
+\begin{itemize}
+	\item [29.] $a_{n}=\frac{(2n+3)!}{(n+1)!}$
+\end{itemize}
+\begin{itemize}
+	\item [30.] $a_{n}=\frac{2^{n}3^{n}}{n!}$
+\end{itemize}
+\begin{itemize}
+	\item [31.] $a_{n}=2-\frac{2}{n}-\frac{1}{2^{n}}$
+\end{itemize}
+\begin{itemize}
+	\item [32.] Suponha que $f(x)$ seja derivável para todo $x$ em [0,1] e $f(0)=0$. Defina a sequência $\left( a_{n}\right) $ pela regra $a_{n}=nf(1/n)$. Mostre que $\lim\limits_{n\rightarrow \infty} a_{n}=f'(0)$. Utilize o resultado do problema (32) para encontrar os limites das sequências dadas em 33. e 34.
+\end{itemize}
+\begin{itemize}
+	\item [33.] $a_{n}=n(e^{1/n}-1)$ \quad\quad  Rpta. 1 
+\end{itemize}
+\begin{itemize}
+	\item [34.] $a_{n}=n\ln (1+\frac{1}{n})$ \quad\quad  Rpta. 2
+\end{itemize}
+\begin{itemize}
+	\item [35.] Mostre que a sequência definida por $a_{1}=2$ e $a_{n+1}=\frac{1}{3-a_{n}}$ satisfaz $0<a_{n}\leq 2$ e é decrescente. Deduza que a sequência é convergente e encontre o seu limite.
+\end{itemize}
+\begin{itemize}
+	\item [36.] Demostre que se $\lim\limits_{n\rightarrow \infty} a_{n}=0$ e $\left(  b_{n} \right)  $ for limitada, então $\lim\limits_{n\rightarrow \infty} a_{n}b_{n}=0$. 
+\end{itemize}
+\begin{itemize}
+	\item [37.] Suponha que $\left\lbrace a_{n}\right\rbrace $ é uma sequência crescente não limitada. Mostre que  $\lim\limits_{n\rightarrow \infty} a_{n}=+\infty$.
+\end{itemize}
+\begin{itemize}
+	\item [38.] Suponha que $A>0$. Dado $x_{1}$ arbitrário, defina a sequência $\left\lbrace x_{n} \right\rbrace$ de maneira recursiva como segue: $x_{n+1}=\frac{1}{2}(x_{n}+\frac{A}{x_{n}})$ se $n\geq 1$. Demostre que se $L=\lim\limits_{n\rightarrow \infty} x_{n}$ existe, então $L=\pm \sqrt{A}$.
+\end{itemize}
+\begin{itemize}
+	\item [39.] Considere a sequência $\left\lbrace a_{n}\right\rbrace $ definida de maneira recursiva por $a_{1}=2$; $a_{n+1}=\frac{1}{2}(a_{n}+4)$ para $n\geq 1$ (a) Demostrar mediante indução sobre $n$ que $a_{n}<4$ para cada $n$ e que $(a_{n})$ é uma sequência crescente. (b) Determine o limite desta sequência.
+\end{itemize}
+\begin{itemize}
+	\item [40.] O tamanho da população de peixes pode ser modelado pela formula $p_{n+1}=\frac{bp_{n}}{a+p_{n}}$ onde $p_{n}$ é o tamanho da população de peixes depois de $n$ anos e $a$ e $b$ são constantes positivas que dependem da espécie e de seu habitat. Suponha que a população no ano 0 seja $p_{0}>0$ (a) Moesstre que se $(p_{n})$ é convergente, então os únicos valores possíveis para seu limite são $0$ e $b-a$. (b) mostre que $p_{n+1}<(b/a)p_{n}$.
+\end{itemize}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}

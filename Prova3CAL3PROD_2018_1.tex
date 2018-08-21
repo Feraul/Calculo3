@@ -1,0 +1,130 @@
+\documentclass[oneside,a4paper,12pt]{article}
+\usepackage[english,brazilian]{babel}
+\usepackage[alf]{abntex2cite}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+\usepackage{lastpage}			  % Usado pela Ficha catalográfica
+\usepackage{indentfirst}		  % Indenta o primeiro parágrafo de cada
+\usepackage[top=20mm, bottom=20mm, left=20mm, right=20mm]{geometry}
+\usepackage{framed}
+\usepackage{booktabs}
+
+\usepackage{float}
+\usepackage{color}				  % Controle das cores
+\usepackage{graphicx}			  % Inclusão de gráficos
+\usepackage{microtype} 		      % para melhorias de justificação
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage[table]{xcolor}
+\usepackage{subfig}
+\usepackage{epstopdf}
+\usepackage{hyperref}
+
+\usepackage[mathcal]{eucal}
+\usepackage{amsmath}               % great math stuff
+\usepackage{amsfonts}              % for blackboard bold, etc
+\usepackage{amsthm}                % better theorem environments
+\usepackage{amssymb}
+\usepackage{mathrsfs}
+\DeclareMathAlphabet{\mathpzc}{OT1}{pzc}{m}{it}
+\usepackage{undertilde}            % botar tilde embaixo da letra
+\usepackage{mathptmx}          % fonte
+\usepackage{graphicx}
+\graphicspath{{./Figuras/}}    
+\definecolor{shadecolor}{rgb}{0.8,0.8,0.8}
+
+
+%FAZ EDICOES AQUI (somente no conteudo que esta entre entre as ultimas  chaves de cada linha!!!)
+\newcommand{\universidade}{Universidade Federal de Pernambuco}
+\newcommand{\centro}{Centro Acadêmico do Agreste}
+\newcommand{\departamento}{Núcleo de Tecnologia}
+\newcommand{\curso}{Engenharia de Produção}
+\newcommand{\professor}{Fernando R. L. Contreras}
+\newcommand{\disciplina}{Cálculo Diferencial e Integral 3}
+%ATE AQUI !!!
+
+\begin{document}
+	\pagestyle{empty}
+	
+	\begin{center}
+	%\includegraphics[width=\linewidth/6]{logoUFPE.jpg}%LOGOTIPO DA INSTITUICAO
+	 	\vspace{0pt}
+	 	
+		\universidade
+		\par
+		\centro
+		\par
+		\departamento
+		\par
+		\curso
+		\par
+		\vspace{08pt}
+		\text{ Prova 3 - Cálculo Diferencial e Integral 3}\\
+		\text{Prof. Fernando R. L. Contreras}	
+	\end{center}
+	
+	%\vspace{0.5pt}
+	
+	\begin{flushleft}
+		\textbf{Aluno(a):}
+	\end{flushleft}
+	
+\begin{itemize}
+\item[1.]  Se $\textbf{r}=(x,y,z)$ e $\textbf{a}\times \textbf{r}=(P,Q,R)$, sendo $\textbf{a}$ um vetor constante, mostrar que $\int_{C} P\mathrm{d}x+Q\mathrm{d}y+R\mathrm{d}z=2\iint_{S}\textbf{a}\cdot \textbf{n}\mathrm{d}s$, sendo $C$ a curva que limita uma superfície paramétrica $S$ e $\textbf{n}$ a normal unitária a $S$ conveniente.\textit{Sug. Utilize o Teorema de Stokes}.
+\end{itemize}
+\begin{itemize}
+\item[2.] Seja o campo vetorial $F=(-2x+\sin(z^{3}),\quad 4y,\quad x^{3}+6z)$ e a superfície aberta $S_{1}$: $y^{2}=x^{2}+z^{2}$, $(0\leq y \leq 3)$ orientada de modo que o vetor normal exterior tenha segunda componente negativa. Calcule o fluxo de $F$ através dela. 
+ \end{itemize}
+ \begin{itemize}
+\item [3.] Dados dois campos escaleres $u$ e $v$, continuamente diferenciáveis num conjunto aberto que contém o disco circular $R$ cuja fronteira é a circunferência $x^{2}+y^{2}=1$, definem-se dois campos vetoriais $\textbf{f}$ e $\textbf{g}$ do mogo seguinte: $\textbf{f}(x,y)=(v(x,y), u(x,y))$, $\textbf{g}(x,y)=(\frac{\partial u}{\partial x}-\frac{\partial u}{\partial y}, \frac{\partial v}{\partial x}-\frac{\partial v}{\partial y})$. Determine o valor do integral duplo $\iint_{R} \textbf{f}\cdot\textbf{g}\mathrm{d}x\mathrm{d}y$ se é sabido que sobre a fronteira de $R$ se tem $u(x,y)=1$ e $v(x,y)=y$. \textit{Sug. Utilize o Teorema de Green}.
+\end{itemize}
+\begin{itemize}
+\item[4.] Calcule a integral $\int_{\Gamma}2(x+y^{2}) \mathrm{d}x+(4xy+\cos y)\mathrm{d}y$, onde $\Gamma$ é uma curva arbitraria suave por partes que une os pontos $(1,0)$ e $(\xi, \eta)$.
+\end{itemize}
+\begin{itemize}
+	\item[Opcional.] Enuncie e mostre o Teorema de Fundamental de Integrais de Linha.
+\end{itemize}
+
+	\flushbottom
+	\flushright
+     \begin{center}
+     	%\includegraphics[width=\linewidth/6]{logoUFPE.jpg}%LOGOTIPO DA INSTITUICAO
+     	\vspace{10pt}
+     	
+     	\universidade
+     	\par
+     	\centro
+     	\par
+     	\departamento
+     	\par
+     	\curso
+     	\par
+     	\vspace{08pt}
+     	\text{ Prova 3 - Cálculo Diferencial e Integral 3}\\
+     	\text{Prof. Fernando R. L. Contreras}	
+     \end{center}
+     
+     \begin{flushleft}
+     	\textbf{Aluno(a):}
+     \end{flushleft}
+ 
+ \begin{itemize}
+ 	\item[1.] Se $\textbf{r}=(x,y,z)$ e $\textbf{a}\times \textbf{r}=(P,Q,R)$, sendo $\textbf{a}$ um vetor constante, mostrar que $\int_{C} P\mathrm{d}x+Q\mathrm{d}y+R\mathrm{d}z=2\iint_{S}\textbf{a}\cdot \textbf{n}\mathrm{d}s$, sendo $C$ a curva que limita uma superfície paramétrica $S$ e $\textbf{n}$ a normal unitária a $S$ conveniente.\textit{Sug. Utilize o Teorema de Stokes}.
+ \end{itemize} 
+ \begin{itemize}
+ 	\item[2.] Seja o campo vetorial $F=(-2x+\sin(z^{3}),\quad 4y,\quad x^{3}+6z)$ e a superfície aberta $S_{1}$: $y^{2}=x^{2}+z^{2}$, $(0\leq y \leq 3)$ orientada de modo que o vetor normal exterior tenha segunda componente negativa. Calcule o fluxo de $F$ através dela. 
+ \end{itemize}
+ \begin{itemize}
+ 	\item [3.] Dados dois campos escaleres $u$ e $v$, continuamente diferenciáveis num conjunto aberto que contém o disco circular $R$ cuja fronteira é a circunferência $x^{2}+y^{2}=1$, definem-se dois campos vetoriais $\textbf{f}$ e $\textbf{g}$ do mogo seguinte: $\textbf{f}(x,y)=(v(x,y), u(x,y))$, $\textbf{g}(x,y)=(\frac{\partial u}{\partial x}-\frac{\partial u}{\partial y}, \frac{\partial v}{\partial x}-\frac{\partial v}{\partial y})$. Determine o valor do integral duplo $\iint_{R} \textbf{f}\cdot\textbf{g}\mathrm{d}x\mathrm{d}y$ se é sabido que sobre a fronteira de $R$ se tem $u(x,y)=1$ e $v(x,y)=y$. \textit{Sug. Utilize o Teorema de Green}.
+ \end{itemize}
+ \begin{itemize}
+ 	\item[4.]Calcule a integral $\int_{\Gamma}2(x+y^{2}) \mathrm{d}x+(4xy+\cos y)\mathrm{d}y$, onde $\Gamma$ é uma curva arbitraria suave por partes que une os pontos $(1,0)$ e $(\xi, \eta)$.
+ \end{itemize}
+ \begin{itemize}
+ 	\item[Opcional.] Enuncie e mostre o Teorema de Fundamental de Integrais de Linha.
+ \end{itemize}
+\flushbottom
+\flushright
+\end{document}
+

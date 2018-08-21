@@ -1,0 +1,125 @@
+\documentclass[oneside,a4paper,12pt]{article}
+\usepackage[english,brazilian]{babel}
+\usepackage[alf]{abntex2cite}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+\usepackage{lastpage}			  % Usado pela Ficha catalográfica
+\usepackage{indentfirst}		  % Indenta o primeiro parágrafo de cada
+\usepackage[top=20mm, bottom=20mm, left=20mm, right=20mm]{geometry}
+\usepackage{framed}
+\usepackage{booktabs}
+
+\usepackage{float}
+\usepackage{color}				  % Controle das cores
+\usepackage{graphicx}			  % Inclusão de gráficos
+\usepackage{microtype} 		      % para melhorias de justificação
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage[table]{xcolor}
+\usepackage{subfig}
+\usepackage{epstopdf}
+\usepackage{hyperref}
+
+\usepackage[mathcal]{eucal}
+\usepackage{amsmath}               % great math stuff
+\usepackage{amsfonts}              % for blackboard bold, etc
+\usepackage{amsthm}                % better theorem environments
+\usepackage{amssymb}
+\usepackage{mathrsfs}
+\DeclareMathAlphabet{\mathpzc}{OT1}{pzc}{m}{it}
+\usepackage{undertilde}            % botar tilde embaixo da letra
+\usepackage{mathptmx}          % fonte
+\usepackage{graphicx}
+\graphicspath{{./Figuras/}}    
+\definecolor{shadecolor}{rgb}{0.8,0.8,0.8}
+
+
+%FAZ EDICOES AQUI (somente no conteudo que esta entre entre as ultimas  chaves de cada linha!!!)
+\newcommand{\universidade}{Universidade Federal de Pernambuco}
+\newcommand{\centro}{Centro Acadêmico do Agreste}
+\newcommand{\departamento}{Núcleo de Tecnologia}
+\newcommand{\curso}{Engenharia de Produção}
+\newcommand{\professor}{Fernando R. L. Contreras}
+\newcommand{\disciplina}{Cálculo Diferencial e Integral 3}
+%ATE AQUI !!!
+
+\begin{document}
+	\pagestyle{empty}
+	
+	\begin{center}
+	%\includegraphics[width=\linewidth/6]{logoUFPE.jpg}%LOGOTIPO DA INSTITUICAO
+	 	\vspace{0pt}
+	 	
+		\universidade
+		\par
+		\centro
+		\par
+		\departamento
+		\par
+		\curso
+		\par
+		\vspace{08pt}
+		\text{ Prova Final - Cálculo Diferencial e Integral 3}\\
+		\text{Prof. Fernando R. L. Contreras}	
+	\end{center}
+	
+	%\vspace{0.5pt}
+	
+	\begin{flushleft}
+		Aluno(a):
+	\end{flushleft}
+	
+\begin{itemize}
+\item[1.] Estude a série de potencia  $\mathlarger{\sum}_{n=0}^{\infty}\frac{(2x-3)^{n}}{\sqrt{n+1}}$.
+\end{itemize}
+\begin{itemize}
+\item[2.] Determine o fluxo do rotacional do campo de vetores $F(x,y,z)=(y^{3},x^{3},e^{z})$ através da superficie $S=\left\lbrace (x,y,z)\in R^{3} / x^{2}+y^{2}+z^{2}=2, x^{2}+y^{2}\leq 1, z\geq 0 \right\rbrace $, com normal exterior. 
+ \end{itemize}
+ \begin{itemize}
+\item [3.] Estude com relação a máximos e mínimos a função $f(x,y)=x^{2}-2xy+3y^{2}$ dada com a restrição $x^{2}+2y^{2}=1$.
+\end{itemize}
+\begin{itemize}
+\item[4.] Seja $R$ a região limitada pelas circunferências $x^{2}+y^{2}=4$ and $x^{2}+y^{2}=1$, calcular a integral de linha $\mathlarger{\int}_{C}2xydx+(x^{2}+2x)dy$ onde $C=C_{1}+C_{2}$ é contorno de $R$.
+\end{itemize}
+ \begin{itemize}
+	\item[Opcional.] Enuncie o Teorema de Green.
+\end{itemize}
+     \begin{center}
+     	%\includegraphics[width=\linewidth/6]{logoUFPE.jpg}%LOGOTIPO DA INSTITUICAO
+     	\vspace{20pt}
+     	
+     	\universidade
+     	\par
+     	\centro
+     	\par
+     	\departamento
+     	\par
+     	\curso
+     	\par
+     	\vspace{12pt}
+     	\text{ Prova Final - Cálculo Diferencial e Integral 3}\\
+     	\text{Prof. Fernando R. L. Contreras}	
+     \end{center}
+     
+     \begin{flushleft}
+     	Aluno(a):
+     \end{flushleft}
+ 
+ \begin{itemize}
+ 	\item[1.] Estude a série de potencia  $\mathlarger{\sum}_{n=0}^{\infty}\frac{(2x-3)^{n}}{\sqrt{n+1}}$.
+ \end{itemize}
+ \begin{itemize}
+ 	\item[2.] Determine o fluxo do rotacional do campo de vetores $F(x,y,z)=(y^{3},x^{3},e^{z})$ através da superficie $S=\left\lbrace (x,y,z)\in R^{3} / x^{2}+y^{2}+z^{2}=2, x^{2}+y^{2}\leq 1, z\geq 0 \right\rbrace $, com normal exterior. 
+ \end{itemize}
+ \begin{itemize}
+ 	\item [3.] Estude com relação a máximos e mínimos a função $f(x,y)=x^{2}-2xy+3y^{2}$ dada com a restrição $x^{2}+2y^{2}=1$.
+ \end{itemize}
+ \begin{itemize}
+ 	\item[4.] Seja $R$ a região limitada pelas circunferências $x^{2}+y^{2}=4$ and $x^{2}+y^{2}=1$, calcular a integral de linha $\mathlarger{\int}_{C}2xydx+(x^{2}+2x)dy$ onde $C=C_{1}+C_{2}$ é contorno de $R$.
+ \end{itemize}
+ \begin{itemize}
+	\item[Opcional.] Enuncie o Teorema de Green.
+\end{itemize}
+\end{document}
+
